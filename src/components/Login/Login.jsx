@@ -1,66 +1,86 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel, Glyphicon } from "react-bootstrap";
 import "./Login.css";
 import logo from "./../../img/logo.png";
+import { connect } from 'react-redux';
+import { userActions } from '../../actions';
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
+     // reset login status
+    this.props.dispatch(userActions.logout());
+
+
     this.state = {
-      email: "",
-      password: ""
+      email: '',
+      password: '',
+      submitted: false
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+}
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+handleSubmit(e) {
+    e.preventDefault();
 
-  handleSubmit = event => {
-    event.preventDefault();
-  }
+    this.setState({ submitted: true });
+    const { email, password } = this.state;
+    const { dispatch } = this.props;
+    if (email && password) {
+        dispatch(userActions.login(email, password));
+         
+    }
+
+   
+}
 
   render() {
-    return (
-      <div className="Login">
-        <img src={logo} className="logo2" />
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-          <Glyphicon glyph="glyphicon glyphicon-user" /> 
-            <ControlLabel> Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-          <Glyphicon glyph="glyphicon glyphicon-lock" /> 
-            <ControlLabel> Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
-        </form>
+    const { loggingIn } = this.props;
+    const { email, password, submitted } = this.state;
+    return (      
+      <div className="col-md-6 col-md-offset-3">
+      <img src={logo} className="logo2" />
+          <h2>Login</h2>
+          <form name="form" onSubmit={this.handleSubmit}>
+              <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
+                  <label>email</label>
+                  <input type="text" className="form-control" name="email" value={email} onChange={this.handleChange} />
+                  {submitted && !email &&
+                      <div className="help-block">Email is required</div>
+                  }
+              </div>
+              <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                  <label>Password</label>
+                  <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
+                  {submitted && !password &&
+                      <div className="help-block">Password is required</div>
+                  }
+              </div>
+              <div className="form-group">
+                  <button className="btn btn-primary">Login</button>
+                  {
+                      loggingIn                      
+                  }
+              </div>
+          </form>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  const { loggingIn } = state.authentication;
+  return {
+      loggingIn
+  };
+}
+
+const connectedLoginPage = connect(mapStateToProps)(Login);
+export { connectedLoginPage as Login }; 

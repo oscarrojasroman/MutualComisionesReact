@@ -5,7 +5,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Tabla from './../components/Tablas/Tablas';
 import CargaDeDatos from './../components/Datos/CargaDeDatos';
-import DetalleArchivos from '../components/Modal/DetalleArchivos';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import TablaPyme from '../components/Tablas/TablaPyme';

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {Table} from 'react-bootstrap';
 import { Button, Glyphicon } from 'react-bootstrap';
 
