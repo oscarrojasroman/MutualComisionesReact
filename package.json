@@ -6,15 +6,21 @@
     "@material-ui/core": "^1.5.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
+    "react-burger-menu": "^2.5.2",
     "react-dom": "^16.2.0",
+    "react-icons": "^3.1.0",
     "react-logger": "^1.1.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "1.1.1",
     "react-tabs": "^2.2.2",
     "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "superagent": "^4.0.0-beta.5",
+    "superagent-promise": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

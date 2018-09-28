@@ -19,7 +19,6 @@ function login(email, password) {
             .then(
                 user => { 
                     dispatch(success(user));
-                    console.log("Estoy Logeado");
                     history.push('/');
                 },
                 error => {

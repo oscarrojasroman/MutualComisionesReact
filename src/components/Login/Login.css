@@ -1,14 +1,46 @@
 @media all and (min-width: 480px) {
     .Login {
-      padding: 60px 0;
+      padding: 83px;
+      background: rgba(143,190,0,1);
+      background: -moz-linear-gradient(top, rgba(143,190,0,1) 0%, rgba(143,190,0,1) 29%, rgba(164,179,87,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(143,190,0,1)), color-stop(29%, rgba(143,190,0,1)), color-stop(100%, rgba(164,179,87,1)));
+      background: -webkit-linear-gradient(top, rgba(143,190,0,1) 0%, rgba(143,190,0,1) 29%, rgba(164,179,87,1) 100%);
+      background: -o-linear-gradient(top, rgba(143,190,0,1) 0%, rgba(143,190,0,1) 29%, rgba(164,179,87,1) 100%);
+      background: -ms-linear-gradient(top, rgba(143,190,0,1) 0%, rgba(143,190,0,1) 29%, rgba(164,179,87,1) 100%);
+      background: linear-gradient(to bottom, rgba(143,190,0,1) 0%, rgba(143,190,0,1) 29%, rgba(164,179,87,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fbe00', endColorstr='#a4b357', GradientType=0 );
     }
   
     .Login form {
       margin: 0 auto;
       max-width: 320px;
+      
     }
+
+    .textBox{
+      border-radius: 2em;
+    }
+
+    .button{
+      border-radius: 2em;
+    }
+
     .logo2 {
         height: 90px;
-        margin-left: 45%;
+        margin-left: 30%;
       }
+    
+      .h3{
+        height: 90px;
+        margin-left: 40%;
+        color: white;
+      }
+
+    .l{
+      margin-left: 35%;
+      margin-right: 30%;
+      color: white;
+    }
+    
+      
   }

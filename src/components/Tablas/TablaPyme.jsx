@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import {Table} from 'react-bootstrap';
 
 
+
 class TablaPyme extends Component {
     render() {
         return (
             <div>
                  <Table responsive>
-                <thead>
+                 <thead>
                   <tr>
                     <th>Tramo</th>
                     <th>Cantidad Trabajadores</th>
-                    <th>UF</th>
-                    <th>UFcita</th>
+                    <th>Comision</th>
+                    <th>Premio</th>
                     
                   </tr>
                 </thead>

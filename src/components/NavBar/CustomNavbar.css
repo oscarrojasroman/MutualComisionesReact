@@ -1,15 +1,20 @@
 nav.navbar, .navbar-default {
   background-color: #7fc300 !important;
+  margin-bottom: 0%;
 }
 
 .navbar-default {
   background-image: none;
   border: none;
   border-radius: 0;
+  border-bottom: solid;
+  border-bottom-color: black;
 }
 
 .logo {
-  height: 30px;  
+  height: 40px; 
+  margin-top: -6%;
+  float: left;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -40,4 +45,12 @@ nav.navbar, .navbar-default {
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   color: white;
   background-color: transparent;
+}
+
+.aa{
+  height: 58px;
+}
+
+.container{
+  width: 100%;
 }

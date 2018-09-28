@@ -10,8 +10,8 @@ class TablaGestorComercial extends Component {
                   <tr>
                     <th>Tramo</th>
                     <th>Cantidad Trabajadores</th>
-                    <th>UF</th>
-                    <th>UFcita</th>
+                    <th>Comision</th>
+                    <th>Premio</th>
                     
                   </tr>
                 </thead>

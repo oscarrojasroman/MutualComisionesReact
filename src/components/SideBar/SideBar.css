@@ -1,0 +1,134 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 15px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color:#555;
+  width: 240px;
+  height: 100vh;
+  float: left;
+  overflow: auto;
+
+}
+
+.li a {
+  display: block;
+  color: white;
+  border-bottom: #FFFFFF outset;
+  padding: 20px 10px 8px 15px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.li a:hover {
+  background-color: #7fc300;
+  color: white;
+}
+
+.a{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 24px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.MenuAside-title-box {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 15px 0px;
+  text-align: center;
+  opacity: 0.22;
+  background-color: #000000;
+}
+
+.MenuAside-title {
+  margin: 0;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 7px;
+  color:#FFFFFF;
+  
+}
+
+.MenuAside-options-list-item {
+  text-align: center;
+  font-size: 12px;	
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 24px;
+  padding: 20px 10px 8px 15px;
+  text-transform: uppercase;    
+  }
+  
+  .MenuAside {
+    padding: 0;
+    min-height: 1000px;
+   -webkit-box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.02);
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.02);
+    background-color: #505050;
+  }
+
+  .btn-add-file {
+    float: center;
+    width: 40%;
+    margin-top: 8px;
+    height: 35px;
+    line-height: 22px;
+    border-radius: 5px !important;
+}

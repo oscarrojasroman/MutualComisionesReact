@@ -7,10 +7,10 @@ import logo from "../../img/logo2.png";
 export default class CustomNavbar extends Component {
   render() {
     return (
-      <Navbar default collapseOnSelect>
+      <Navbar default collapseOnSelect className="aa">               
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/"><img className="logo" src={logo}/></Link>
+            <Link to="/"><img className="logo" alt="Logo Mutual" src={logo}/></Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -22,14 +22,12 @@ export default class CustomNavbar extends Component {
             <NavItem eventKey={2} componentClass={Link} href="/calcular" to="/calcular">
               Calcular
             </NavItem>  
-            <NavItem eventKey={3} componentClass={Link} href="/about" to="/about">
-              About
-            </NavItem>         
+                   
             <NavItem eventKey={4} componentClass={Link} href="/login" to="/login">
               Logout
             </NavItem>
           </Nav>
-        </Navbar.Collapse>
+        </Navbar.Collapse>        
       </Navbar>
     )
   }

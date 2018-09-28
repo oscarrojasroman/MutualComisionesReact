@@ -5,10 +5,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import TablaPyme from '../components/Tablas/TablaPyme';
-import TablaFullRegion from '../components/Tablas/TablaFullRegion';
-import TablaGestorComercial from '../components/Tablas/TablaGestorComercial';
 import './Calcular.css';
+import Tablas from '../components/Tablas/Tablas';
 
 const styles = theme => ({
   root: {
@@ -31,21 +29,14 @@ function FullWidthGrid(props) {
         <Grid className="calculateTable" >
           <Paper className={classes.paper}>
           <Tabs>
-            <TabList className="card-header p">           
-              <Tab>Pyme</Tab>
-              <Tab>Full Region</Tab>
-              <Tab>Gestor Comercial</Tab>
+            <TabList>           
+              <Tab>Calculo</Tab>
             </TabList>
 
             <TabPanel>
-            <TablaPyme/>
+            <Tablas/>
             </TabPanel>
-            <TabPanel>
-            <TablaFullRegion/>
-            </TabPanel>
-            <TabPanel>
-            <TablaGestorComercial/>
-            </TabPanel>
+           
           </Tabs>           
           </Paper>
         </Grid>       

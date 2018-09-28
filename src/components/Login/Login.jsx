@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import logo from "./../../img/logo.png";
+import logo from "./../../img/logo2.png";
 import { connect } from 'react-redux';
 import { userActions } from '../../actions';
 
@@ -45,26 +45,27 @@ handleSubmit(e) {
     const { loggingIn } = this.props;
     const { email, password, submitted } = this.state;
     return (      
-      <div className="col-md-6 col-md-offset-3">
-      <img src={logo} className="logo2" />
-          <h2>Login</h2>
+      <div className="Login">
+      <img src={logo} alt="Logo Mutual" className="logo2" />
+        <h3 className="h3">Pagos de Comisíon</h3>
+          <h2 className="l">Login</h2>
           <form name="form" onSubmit={this.handleSubmit}>
               <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
                   <label>email</label>
-                  <input type="text" className="form-control" name="email" value={email} onChange={this.handleChange} />
+                  <input type="text" className="form-control textBox" name="email" value={email} onChange={this.handleChange} />
                   {submitted && !email &&
                       <div className="help-block">Email is required</div>
                   }
               </div>
               <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                   <label>Password</label>
-                  <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
+                  <input type="password" className="form-control textBox" name="password" value={password} onChange={this.handleChange} />
                   {submitted && !password &&
                       <div className="help-block">Password is required</div>
                   }
               </div>
               <div className="form-group">
-                  <button className="btn btn-primary">Login</button>
+                  <button className="btn btn-primary button">Login</button>
                   {
                       loggingIn                      
                   }
