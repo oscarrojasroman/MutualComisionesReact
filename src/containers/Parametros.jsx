@@ -8,7 +8,9 @@ import 'react-tabs/style/react-tabs.css';
 import TablaPyme from '../components/Tablas/TablaPyme';
 import TablaFullRegion from '../components/Tablas/TablaFullRegion';
 import TablaGestorComercial from '../components/Tablas/TablaGestorComercial';
+import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
+import TablaTope from '../components/Tablas/TablaTope';
 
 const styles = theme => ({
   root: {
@@ -17,7 +19,7 @@ const styles = theme => ({
   paper: {
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    
   },
 });
 
@@ -28,23 +30,37 @@ function FullWidthGrid(props) {
 
   <div className={classes.root}>   
       <Grid className="wrapper">
-        <Grid className="calculateTable" >
+        <Grid className="calculateTable1" >
           <Paper className={classes.paper}>
           <Tabs>
-            <TabList className="card-header p">           
-              <Tab>Pyme</Tab>
-              <Tab>Full Region</Tab>
-              <Tab>Gestor Comercial</Tab>
+            <TabList className="card-header p"> 
+            <ul className="nav-justified">         
+              <Tab className="tab">RANGOS</Tab>
+              <Tab className="tab">UF</Tab>
+              <Tab className="tab">TOPE</Tab>
+            </ul> 
             </TabList>
 
             <TabPanel>
-            <TablaPyme/>
+              <div className="t2 t">
+                <TablaPyme/>
+              </div>
+              <div className="t">
+                <TablaFullRegion />
+              </div>              
+              <div className="t">
+                <TablaGestorComercial/>
+              </div>
+              
+            </TabPanel>
+
+            <TabPanel>
+              <div className="tUf">
+               <TablaUf/>
+              </div>
             </TabPanel>
             <TabPanel>
-            <TablaFullRegion/>
-            </TabPanel>
-            <TabPanel>
-            <TablaGestorComercial/>
+              <TablaTope/>
             </TabPanel>
           </Tabs>           
           </Paper>

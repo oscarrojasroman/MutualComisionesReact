@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import {Table} from 'react-bootstrap';
+//import {Table} from 'react-bootstrap';
 import { Button, Glyphicon } from 'react-bootstrap';
 
 class Tablas extends Component {
     render() {
         return (
             <div>
-                 <Table responsive>
+              {/*  <Table responsive>
                 <thead>
                   <tr>
                     <th>#</th>
@@ -74,10 +74,14 @@ class Tablas extends Component {
                     <td>10654347-5</td>
                   </tr>
                 </tbody>
-              </Table>
+              </Table>*/}
               <Button className="btn btn-primary button" bsSize="large" block>
               <Glyphicon glyph=" glyphicon glyphicon-play" /> 
-                 Ejecutar
+                 Ejecutar Comision
+              </Button>
+              <Button className="btn btn-primary button" bsSize="large" block>
+              <Glyphicon glyph=" glyphicon glyphicon-play" /> 
+                 Ejecutar Veda
               </Button>
             </div>
         );

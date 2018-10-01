@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Calcular.css';
 import Tablas from '../components/Tablas/Tablas';
@@ -29,8 +29,8 @@ function FullWidthGrid(props) {
         <Grid className="calculateTable" >
           <Paper className={classes.paper}>
           <Tabs>
-            <TabList>           
-              <Tab>Calculo</Tab>
+            <TabList className="card-header">           
+              <h4 className="h4">CALCULO</h4>
             </TabList>
 
             <TabPanel>

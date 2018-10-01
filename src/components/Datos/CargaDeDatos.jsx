@@ -28,7 +28,7 @@ function FullWidthGrid(props) {
           
                 <div class="form-group">
                     <div className="card-header color-secundary">
-                      <p>CARGA DE ARCHIVOS</p>
+                      <p className="p">CARGA DE ARCHIVOS</p>
                     </div>
                     <br/>
                     <input type="file" className="form-control-file inputFile" id="exampleFormControlFile1"/>

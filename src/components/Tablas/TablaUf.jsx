@@ -1,30 +1,33 @@
-import React, { Component } from 'react';
-import { tableActions } from '../../actions/table.actions';
+import React from 'react';
+import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import './Tablas.css';
 
-class TablaUf extends Component {
-   componentDidMount()
-   {
-       this.props.dispatch(tableActions.getUf());
-   }
-    render() {
-        const { ufs } = this.props;
-        return (
-            <div>
-                <tbody>
-                    <tr>
-                        <td>{ufs.value}</td>
-                        <td>{ufs.date}</td>
-                    </tr>
-                    
-                </tbody>
-                
-            </div>
-        );
-    }
+const uf = [];
+
+function addUf(quantity) {
+  const startId = uf.length;
+  for (let i = 1; i < quantity; i++) {
+    const id = startId + i;
+    uf.push({
+      id: id,
+      price: 29150.44 + i 
+    });
+  }
 }
 
-TablaUf.propTypes = {
+addUf(5);
 
+const cellEditProp = {
+  mode: 'click'
 };
 
-export default TablaUf;
+export default class ClickToEditTable extends React.Component {
+  render() {
+    return (
+      <BootstrapTable data={ uf } cellEdit={ cellEditProp }>
+          <TableHeaderColumn className="tablaUf t4" dataField='id' isKey={ true }>UF ID</TableHeaderColumn>
+          <TableHeaderColumn className="tablaUf" dataField='price'>Valor UF</TableHeaderColumn>        
+      </BootstrapTable>
+    );
+  }
+}

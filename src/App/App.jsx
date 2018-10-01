@@ -7,10 +7,9 @@ import News from '../components/News/News';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
 import Cotizacion from '../components/Cotizaciones';
-import Calcular from '../containers/Calcular';
-import Calcular2 from '../containers/Calcular2';
+import Calcular from '../containers/Parametros';
+import Calculo from '../containers/Calculo';
 import {PrivateRoute }  from '../components/PrivateRoute/PrivateRoute';
-import { alertActions } from '../actions';
 import { history } from '../helpers';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
@@ -18,6 +17,7 @@ import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
 import { APP_LOAD , REDIRECT} from '../constants/actionTypes';
 import agent from '../reducers/agent';
+import TablaUf from '../components/Tablas/TablaUf';
 import { store } from '../reducers/store';
 
 
@@ -36,12 +36,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-   
-} 
-
+ 
   componentWillReceiveProps(nextProps){
     if(nextProps.redrectTo){
       store.dispatch(push(nextProps.redrectTo));
@@ -72,9 +67,10 @@ class App extends Component {
                           <PrivateRoute path="/news" component={News} />                        
                           <PrivateRoute path="/cotizacion" component={Cotizacion} />
                           <PrivateRoute path="/parametros" component={Calcular} />
-                          <PrivateRoute path="/calcular" component={Calcular2} />
+                          <PrivateRoute path="/calcular" component={Calculo} />
                           <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
-                          <PrivateRoute path="/reporte"/>
+                          <PrivateRoute path="/reporte" component={TablaUf} />
+                          <PrivateRoute path="/#"/>
                           <Route path="/login" component={Login} />
  
                         
