@@ -24,7 +24,7 @@ const cellEditProp = {
 export default class ClickToEditTable extends React.Component {
   render() {
     return (
-      <BootstrapTable data={ uf } cellEdit={ cellEditProp }>
+      <BootstrapTable data={ uf } cellEdit={ cellEditProp } className="tabla">
           <TableHeaderColumn className="tablaUf t4" dataField='id' isKey={ true }>UF ID</TableHeaderColumn>
           <TableHeaderColumn className="tablaUf" dataField='price'>Valor UF</TableHeaderColumn>        
       </BootstrapTable>

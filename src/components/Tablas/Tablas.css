@@ -2,11 +2,15 @@
     text-align: center;
     background-color: #505050;
     color: white;
+    width: 316px;
 }
 
 .tabla{
     width: 40%;
-    border: 1px solid #505050;
+   
+    background: white;
+    margin-left: 30%;
+    margin-bottom: 10%;
 }
 
 .tablaUf{
@@ -17,4 +21,21 @@
 
 .t4{
     width: 287px;
+}
+
+.tablafull{
+    margin-bottom: 2%;
+    width: 39.5%;
+    background: white;
+}
+
+.headertable{
+    padding: 0%;
+    margin: 0%;
+}
+
+.tablapyme{
+    margin-bottom: 5%;
+    width: 317px;
+    background: white;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+
 import Grid from '@material-ui/core/Grid';
 import { Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -27,7 +27,7 @@ function FullWidthGrid(props) {
   <div className={classes.root}>   
       <Grid className="wrapper">
         <Grid className="calculateTable" >
-          <Paper className={classes.paper}>
+          
           <Tabs>
             <TabList className="card-header">           
               <h4 className="h4">CALCULO</h4>
@@ -38,7 +38,7 @@ function FullWidthGrid(props) {
             </TabPanel>
            
           </Tabs>           
-          </Paper>
+         
         </Grid>       
       </Grid>
     </div>

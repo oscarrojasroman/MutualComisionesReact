@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { Router, Route} from 'react-router-dom';
 import Home from '../components/Home/Home';
-import About from '../components/About/About';
-import News from '../components/News/News';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
 import Cotizacion from '../components/Cotizaciones';
@@ -17,7 +15,6 @@ import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
 import { APP_LOAD , REDIRECT} from '../constants/actionTypes';
 import agent from '../reducers/agent';
-import TablaUf from '../components/Tablas/TablaUf';
 import { store } from '../reducers/store';
 
 
@@ -60,16 +57,14 @@ class App extends Component {
                     <div className="grid responsive" >                    
                     <Router history={history}>
                       <div>
-                          <Navbar/>                      
+                          <Navbar />                      
                           <SideBar2 />
-                          <PrivateRoute exact path="/" component={Home} />
-                          <PrivateRoute path="/about" component={About} />
-                          <PrivateRoute path="/news" component={News} />                        
+                          <PrivateRoute exact path="/" component={Home} />                     
                           <PrivateRoute path="/cotizacion" component={Cotizacion} />
                           <PrivateRoute path="/parametros" component={Calcular} />
                           <PrivateRoute path="/calcular" component={Calculo} />
                           <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
-                          <PrivateRoute path="/reporte" component={TablaUf} />
+                          <PrivateRoute path="/#"/>
                           <PrivateRoute path="/#"/>
                           <Route path="/login" component={Login} />
  

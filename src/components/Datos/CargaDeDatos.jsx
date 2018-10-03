@@ -39,7 +39,7 @@ function FullWidthGrid(props) {
                     <br/>
                     <input type="file" className="form-control-file inputFile" id="exampleFormControlFile4"/> 
                     <br/>                  
-                    <button className="btn btn-add-file">Validar Archivos</button>
+                    <button className="btn btn-add-file p">Validar Archivos</button>
                 </div>
           
         </Grid>       

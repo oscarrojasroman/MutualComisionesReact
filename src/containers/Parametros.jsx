@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import TablaPyme from '../components/Tablas/TablaPyme';
-import TablaFullRegion from '../components/Tablas/TablaFullRegion';
-import TablaGestorComercial from '../components/Tablas/TablaGestorComercial';
+import TablaPyme2 from '../components/Tablas/TablaPyme2';
+import TablaFullRegion2 from '../components/Tablas/TablaFullRegion2';
+import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
@@ -31,9 +30,9 @@ function FullWidthGrid(props) {
   <div className={classes.root}>   
       <Grid className="wrapper">
         <Grid className="calculateTable1" >
-          <Paper className={classes.paper}>
+          
           <Tabs>
-            <TabList className="card-header p"> 
+            <TabList className="card-header1 p"> 
             <ul className="nav-justified">         
               <Tab className="tab">RANGOS</Tab>
               <Tab className="tab">UF</Tab>
@@ -42,14 +41,14 @@ function FullWidthGrid(props) {
             </TabList>
 
             <TabPanel>
-              <div className="t2 t">
-                <TablaPyme/>
+              <div className="t2 ">
+                <TablaPyme2/>
               </div>
               <div className="t">
-                <TablaFullRegion />
+                <TablaFullRegion2 />
               </div>              
               <div className="t">
-                <TablaGestorComercial/>
+                <TablaGestorComercial2/>
               </div>
               
             </TabPanel>
@@ -63,7 +62,7 @@ function FullWidthGrid(props) {
               <TablaTope/>
             </TabPanel>
           </Tabs>           
-          </Paper>
+          
         </Grid>       
       </Grid>
     </div>

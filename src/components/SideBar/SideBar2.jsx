@@ -13,7 +13,7 @@ class SideBar2 extends Component {
                     <li className='li MenuAside-options-list-item'><a className="a" href="/">Home   <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Cargadearchivos">Carga de Archivos   <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Parametros">Parametrizacion   <IoIosArrowForward/></a></li>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular">Calculo   <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular">Calcular   <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Reporte">Reporte   <IoIosArrowForward/></a></li>
                 </ul>
                 

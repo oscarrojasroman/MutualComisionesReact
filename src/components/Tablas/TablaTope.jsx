@@ -24,7 +24,7 @@ const cellEditProp = {
 export default class TablaTope extends Component {
   render() {
     return (
-      <BootstrapTable data={ tope } cellEdit={ cellEditProp }>
+      <BootstrapTable data={ tope } cellEdit={ cellEditProp } className="tabla">
           
           <TableHeaderColumn className="tablaUf t4" dataField='id' isKey={ true }>TOPE ID</TableHeaderColumn>
           <TableHeaderColumn className="tablaUf" dataField='price'>Valor TOPE</TableHeaderColumn>        
