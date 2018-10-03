@@ -7,8 +7,6 @@ import { userActions } from '../../actions';
 class Login extends Component {
   constructor(props) {
     super(props);
-
-     // reset login status
     this.props.dispatch(userActions.logout());
 
 
@@ -35,10 +33,7 @@ handleSubmit(e) {
     const { dispatch } = this.props;
     if (email && password) {
         dispatch(userActions.login(email, password));
-         
-    }
-
-   
+    }   
 }
 
   render() {

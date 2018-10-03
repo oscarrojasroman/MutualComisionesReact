@@ -20,12 +20,8 @@ function login(email, password) {
     return fetch(config.apiUrl + '/account/login', requestOptions)
         .then(handleResponse, handleError)
         .then(user => {
-            // login successful if there's a jwt token in the response
             if (user && user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(user));
-               
-                
+                localStorage.setItem('user', JSON.stringify(user));              
             }
 
 
@@ -34,7 +30,6 @@ function login(email, password) {
 }
 
 function logout() {
-    // remove user from local storage to log user out
     localStorage.removeItem('user');
 }
 
@@ -76,7 +71,6 @@ function update(user) {
     return fetch(config.apiUrl + '/users/' + user.id, requestOptions).then(handleResponse, handleError);
 }
 
-// prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
     const requestOptions = {
         method: 'DELETE',
@@ -89,7 +83,6 @@ function _delete(id) {
 function handleResponse(response) {
     return new Promise((resolve, reject) => {
         if (response.ok) {
-            // return json if it was returned in the response
             var contentType = response.headers.get("content-type");
             if (contentType && contentType.includes("application/json")) {
                 response.json().then(json => resolve(json));
@@ -97,7 +90,6 @@ function handleResponse(response) {
                 resolve();
             }
         } else {
-            // return error message from response body
             response.text().then(text => reject(text));
         }
     });

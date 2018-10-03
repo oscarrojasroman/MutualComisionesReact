@@ -4,7 +4,6 @@ import { Router, Route} from 'react-router-dom';
 import Home from '../components/Home/Home';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
-import Cotizacion from '../components/Cotizaciones';
 import Calcular from '../containers/Parametros';
 import Calculo from '../containers/Calculo';
 import {PrivateRoute }  from '../components/PrivateRoute/PrivateRoute';
@@ -60,16 +59,11 @@ class App extends Component {
                           <Navbar />                      
                           <SideBar2 />
                           <PrivateRoute exact path="/" component={Home} />                     
-                          <PrivateRoute path="/cotizacion" component={Cotizacion} />
                           <PrivateRoute path="/parametros" component={Calcular} />
                           <PrivateRoute path="/calcular" component={Calculo} />
                           <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
                           <PrivateRoute path="/#"/>
-                          <PrivateRoute path="/#"/>
-                          <Route path="/login" component={Login} />
- 
-                        
-                               
+                          <Route path="/login" component={Login} />                               
                       </div>  
                                       
                     </Router>
