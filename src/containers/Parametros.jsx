@@ -10,6 +10,7 @@ import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
+import { IoIosShuffle, IoIosCash, IoIosHand } from 'react-icons/io';
 
 const styles = theme => ({
   root: {
@@ -32,11 +33,11 @@ function FullWidthGrid(props) {
         <Grid className="calculateTable1" >
           
           <Tabs>
-            <TabList className="card-header1 p"> 
-            <ul className="nav-justified">         
-              <Tab className="tab">RANGOS</Tab>
-              <Tab className="tab">UF</Tab>
-              <Tab className="tab">TOPE</Tab>
+            <TabList className="card-header1"> 
+            <ul className="nav-justified nav1">         
+              <Tab className="tab"><IoIosShuffle/> RANGOS</Tab>
+              <Tab className="tab"><IoIosCash/> UF</Tab>
+              <Tab className="tab"><IoIosHand/>TOPE</Tab>
             </ul> 
             </TabList>
 

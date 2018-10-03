@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SideBar.css';
-import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward, IoIosHome, IoIosDocument, IoIosBuild, IoIosCalculator, IoIosClipboard } from 'react-icons/io';
 
 class SideBar2 extends Component {
     render() {
@@ -10,11 +10,11 @@ class SideBar2 extends Component {
                     <div className="MenuAside-title-box">
                         <p className="MenuAside-title">MENÚ</p>
                     </div>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/">Home   <IoIosArrowForward/></a></li>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/Cargadearchivos">Carga de Archivos   <IoIosArrowForward/></a></li>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/Parametros">Parametrizacion   <IoIosArrowForward/></a></li>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular">Calcular   <IoIosArrowForward/></a></li>
-                    <li className='li MenuAside-options-list-item'><a className="a" href="/Reporte">Reporte   <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/"><IoIosHome/>Home   <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/Cargadearchivos"><IoIosDocument/>Carga de Archivos   <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/Parametros"><IoIosBuild/>Parametrizacion   <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular"><IoIosCalculator/>Calcular  <IoIosArrowForward/></a></li>
+                    <li className='li MenuAside-options-list-item'><a className="a" href="/Reporte"><IoIosClipboard/>Reporte   <IoIosArrowForward/></a></li>
                 </ul>
                 
             </div>

@@ -32,8 +32,7 @@
 .card-header1 {
   height: 49px;
   text-align: center;
-  border-top-left-radius: 27px;
-  border-top-right-radius: 27px;
+ 
   background: #505050;
   padding-top: 10px;
 }
@@ -99,8 +98,8 @@ ul.Upload-file-list {
 margin-top: 20px;
 margin-right: 10%;
 margin-left: 25%;
-background: transparent;
-border-radius: 4%;
+background: white;
+
 border:solid;
 
 }
@@ -109,8 +108,7 @@ border:solid;
   margin-right: 10%;
   margin-left: 25%;
   background: white;
-  border-radius: 4%;
-  
+
   }
 
 .inputFile{
@@ -143,8 +141,15 @@ border:solid;
 .tab:hover {
   background-color: #7fc300;
   color: white;
+ 
 }
 
 .h4{
   color: white;
 }
+
+.nav1{
+  margin-left: 0%;
+  padding-left: 0%;
+}
+

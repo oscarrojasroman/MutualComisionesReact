@@ -19,11 +19,11 @@ export default class TablaFullRegion2 extends Component {
     return (
         <div>
             <caption className="caption">Full Region</caption>
-            <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } className="tablafull">        
-                <TableHeaderColumn  dataField='id' isKey={ true }>Tramo</TableHeaderColumn>
-                <TableHeaderColumn  dataField='cantidadTrabajadores'>N° Trabajadores</TableHeaderColumn>     
-                <TableHeaderColumn  dataField='comision'>Comision</TableHeaderColumn>
-                <TableHeaderColumn  dataField='premio'>Premio</TableHeaderColumn>         
+            <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } className="tablafull">  
+                    <TableHeaderColumn  dataField='id' isKey={ true }>Tramo</TableHeaderColumn>
+                    <TableHeaderColumn  dataField='cantidadTrabajadores'>N° Trabajadores</TableHeaderColumn>     
+                    <TableHeaderColumn  dataField='comision'>Comision</TableHeaderColumn>
+                    <TableHeaderColumn  dataField='premio'>Premio</TableHeaderColumn>    
             </BootstrapTable>
        </div>
        

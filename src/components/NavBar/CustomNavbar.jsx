@@ -3,6 +3,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './CustomNavbar.css';
 import logo from "../../img/logo2.png";
+import { IoIosPerson, IoIosHome, IoIosCalculator } from 'react-icons/io';
 
 export default class CustomNavbar extends Component {
   render() {
@@ -17,14 +18,14 @@ export default class CustomNavbar extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
-              Home
+            <IoIosHome/>Home
             </NavItem>
             <NavItem eventKey={2} componentClass={Link} href="/calcular" to="/calcular">
-              Calcular
+            <IoIosCalculator/>Calcular
             </NavItem>  
                    
             <NavItem eventKey={4} componentClass={Link} href="/login" to="/login">
-              Logout
+              <IoIosPerson/> Logout
             </NavItem>
           </Nav>
         </Navbar.Collapse>        

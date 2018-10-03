@@ -20,7 +20,8 @@ import { store } from '../reducers/store';
 const mapStateToProps = state => {
   const { alert } = state;
   return {
-    alert
+    alert,
+    
   }
 };
 

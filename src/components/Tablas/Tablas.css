@@ -27,6 +27,7 @@
     margin-bottom: 2%;
     width: 39.5%;
     background: white;
+    border: solid;
 }
 
 .headertable{
@@ -38,5 +39,9 @@
     margin-bottom: 5%;
     width: 317px;
     background: white;
+    border: solid;
 }
 
+.headerTable{
+    margin-bottom: 0px;
+}
