@@ -12,16 +12,18 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
-import { APP_LOAD , REDIRECT} from '../constants/actionTypes';
+import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
 import agent from '../reducers/agent';
 import { store } from '../reducers/store';
 
 
-const mapStateToProps = state => {
+
+
+const mapStateToProps = ( state )=> {
   const { alert } = state;
   return {
-    alert
-    
+    alert,
+
   }
 };
 
@@ -52,7 +54,7 @@ class App extends Component {
 
   render() {
     const { alert } = this.props;
-   
+    
         return (      
                     <div className="grid responsive" >                    
                     <Router history={history}>

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
-import { Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Calcular.css';
 import Tablas from '../components/Tablas/Tablas';
+import { IoIosCalculator } from 'react-icons/io';
+
 
 const styles = theme => ({
   root: {
@@ -25,20 +25,12 @@ function FullWidthGrid(props) {
   return (
 
   <div className={classes.root}>   
-      <Grid className="wrapper">
-        <Grid className="calculateTable" >
-          
-          <Tabs>
-            <TabList className="card-header">           
-              <h4 className="h4">CALCULO</h4>
-            </TabList>
-
-            <TabPanel>
-            <Tablas/>
-            </TabPanel>
-           
-          </Tabs>           
-         
+      <Grid className="wrapper1">
+        <Grid className="tableCalculos" >
+           <div className="card-header1 color-secundary">
+               <p className="p"><IoIosCalculator/> CALCULO</p>
+            </div>
+              <Tablas/>
         </Grid>       
       </Grid>
     </div>

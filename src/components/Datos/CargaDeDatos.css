@@ -21,8 +21,7 @@
 .card-header {
     height: 49px;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+   
     background: #505050;
 }
 
@@ -90,7 +89,7 @@ ul.Upload-file-list {
   margin-right: 10%;
   margin-left: 25%;
   background: white;
-  border-radius: 4%;
+  border: solid;
 }
 
 .inputFile{
@@ -100,5 +99,7 @@ ul.Upload-file-list {
 
 .p{
     color: white;
+    text-transform: uppercase;
+    font-size: 1.3em;
 }
 

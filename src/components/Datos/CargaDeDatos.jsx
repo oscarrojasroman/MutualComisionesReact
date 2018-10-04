@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import 'react-tabs/style/react-tabs.css';
 import './CargaDeDatos.css'
+import { IoIosDocument } from 'react-icons/io';
 
 
 const styles = theme => ({
@@ -28,7 +29,7 @@ function FullWidthGrid(props) {
           
                 <div class="form-group">
                     <div className="card-header color-secundary">
-                      <p className="p">CARGA DE ARCHIVOS</p>
+                      <p className="p"><IoIosDocument/> CARGA DE ARCHIVOS</p>
                     </div>
                     <br/>
                     <input type="file" className="form-control-file inputFile" id="exampleFormControlFile1"/>

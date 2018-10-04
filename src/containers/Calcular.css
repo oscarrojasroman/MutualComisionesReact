@@ -1,12 +1,14 @@
-.wrapper {
+.wrapper1 {
     width: 100vw;
     height: 100vh;
+    border-radius: 0%;
 }
 
 .calculateTable{
   margin-top: 28px;
   margin-right: 10%;
   margin-left: 25%;
+  border-radius: 0%;
 }
 
 .btn-file {
@@ -32,11 +34,20 @@
 .card-header1 {
   height: 49px;
   text-align: center;
- 
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   background: #505050;
   padding-top: 10px;
+  padding-left: 0px;
 }
 
+
+.card-header{
+  height: 49px;
+  margin-left: 0%;
+  background: #505050;
+  }
+ 
 .card-header p{
   line-height: 49px;  
 }
@@ -111,6 +122,17 @@ border:solid;
 
   }
 
+  
+.tableCalculos{
+  margin-top: 20px;
+  margin-right: 10%;
+  margin-left: 25%;
+  background: white;
+  border-radius: 0%;
+  border: solid;
+  }
+
+
 .inputFile{
   margin-left: 6%;
 }
@@ -136,6 +158,8 @@ border:solid;
   color: white;
   width: 30%;
   background-color: #505050;
+  text-transform: uppercase;
+  font-size: 1.3em;
 }
 
 .tab:hover {
@@ -146,6 +170,7 @@ border:solid;
 
 .h4{
   color: white;
+  margin-left: 350px;
 }
 
 .nav1{
