@@ -19,7 +19,7 @@ export default class CustomNavbar extends Component {
           <Nav pullRight>
            
             <NavItem eventKey={4} componentClass={Link} href="/login" to="/login">
-              <IoIosPerson/> Logout
+              <IoIosPerson/> Cerrar Sesion
             </NavItem>
           </Nav>
         </Navbar.Collapse>        
