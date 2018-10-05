@@ -22,10 +22,20 @@
     text-align: center;
     background-color: #505050;
     color: white;
-    width: 308px;
+    width: 100%;
     padding: 0;
     height: 35px;
     margin-bottom: 0%;
+}
+
+.captionuf{
+    text-align: center;
+    background-color: #505050;
+    color: white;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0%;
+    height: 35px;
 }
 
 .tabla{
@@ -105,4 +115,12 @@
     color:#ababab;
     text-align: center;
     margin-left: 60px;
+}
+
+.tablaMeta{
+    margin-bottom: 5%;
+    width: 317px;
+    background: white;
+    border: solid;
+    margin-left: 30%;
 }

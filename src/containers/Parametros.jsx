@@ -11,6 +11,7 @@ import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
 import { IoIosShuffle, IoIosCash, IoIosHand } from 'react-icons/io';
+import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 
 const styles = theme => ({
   root: {
@@ -61,6 +62,7 @@ function FullWidthGrid(props) {
             </TabPanel>
             <TabPanel>
               <TablaTope/>
+              <TablaMinTrab/>
             </TabPanel>
           </Tabs>           
           

@@ -24,11 +24,13 @@ const cellEditProp = {
 export default class TablaTope extends Component {
   render() {
     return (
-      <BootstrapTable data={ tope } cellEdit={ cellEditProp } className="tabla">
-          
-          <TableHeaderColumn className="tablaUf t4" dataField='id' isKey={ true }>TOPE ID</TableHeaderColumn>
-          <TableHeaderColumn className="tablaUf" dataField='price'>Valor TOPE</TableHeaderColumn>        
-      </BootstrapTable>
+      <div className="tabla">
+        <p className="captionuf">UF</p>
+        <BootstrapTable data={ tope } cellEdit={ cellEditProp } >          
+            <TableHeaderColumn  dataField='id' isKey={ true }>TOPE ID</TableHeaderColumn>
+            <TableHeaderColumn  dataField='price'>Valor TOPE</TableHeaderColumn>        
+        </BootstrapTable>
+      </div>
     );
   }
 }
