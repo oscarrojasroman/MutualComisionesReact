@@ -113,6 +113,7 @@ export default class CalculoComision extends Component {
               </Table>
               </Modal.Body>
                 <Modal.Footer>
+                <Button bsStyle="primary">Ejecutar</Button>
                 <Button onClick={this.handleHide}>Close</Button>
               </Modal.Footer>
             </Modal>

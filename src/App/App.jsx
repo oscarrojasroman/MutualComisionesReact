@@ -23,6 +23,7 @@ const mapStateToProps = ( state )=> {
   const { alert } = state;
   return {
     alert,
+   
 
   }
 };

@@ -27,7 +27,7 @@ function FullWidthGrid(props) {
       <Grid className="wrapper">
         <Grid className="calculateTable">
           
-                <div class="form-group">
+                <div className="form-group">
                     <div className="card-header color-secundary">
                       <p className="p"><IoIosDocument/> CARGA DE ARCHIVOS</p>
                     </div>

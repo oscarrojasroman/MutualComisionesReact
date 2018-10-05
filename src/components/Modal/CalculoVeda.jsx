@@ -114,7 +114,8 @@ export default class CalculoVeda extends Component {
               </Table>
               </Modal.Body>
                 <Modal.Footer>
-                <Button onClick={this.handleHide}>Close</Button>
+                <Button bsStyle="primary">Ejecutar</Button>
+                <Button onClick={this.handleHide}>Cerrar</Button>
               </Modal.Footer>
             </Modal>
           </div>

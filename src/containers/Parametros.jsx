@@ -37,7 +37,7 @@ function FullWidthGrid(props) {
             <ul className="nav-justified nav1">         
               <Tab className="tab"><IoIosShuffle/> RANGOS</Tab>
               <Tab className="tab"><IoIosCash/> UF</Tab>
-              <Tab className="tab"><IoIosHand/>TOPE</Tab>
+              <Tab className="tab"><IoIosHand/>TOPES</Tab>
             </ul> 
             </TabList>
 
