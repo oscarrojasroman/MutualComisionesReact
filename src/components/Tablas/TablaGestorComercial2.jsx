@@ -17,9 +17,9 @@ export default class TablaGestorComercial extends Component {
     }
   render() {
     return (
-        <div> 
-            <caption className="caption">Gestor Comercial</caption>
-      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } className="tablafull">          
+        <div className="tablafull"> 
+            <p className="captiong">Gestor Comercial</p>
+      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
           <TableHeaderColumn  dataField='id' isKey={ true }>Tramo</TableHeaderColumn>
           <TableHeaderColumn  dataField='cantidadTrabajadores'>N° Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='comision'>Comision</TableHeaderColumn>

@@ -1,8 +1,31 @@
-.caption{
+.captionf{
     text-align: center;
     background-color: #505050;
     color: white;
-    width: 316px;
+    width: 308px;
+    padding: 0;
+    height: 35px;
+    margin-bottom: 0%;
+}
+
+.captionp{
+    text-align: center;
+    background-color: #505050;
+    color: white;
+    width: 311px;
+    padding: 0;
+    margin-bottom: 0%;
+    height: 35px;
+}
+
+.captiong{
+    text-align: center;
+    background-color: #505050;
+    color: white;
+    width: 308px;
+    padding: 0;
+    height: 35px;
+    margin-bottom: 0%;
 }
 
 .tabla{
@@ -10,6 +33,7 @@
     background: white;
     margin-left: 30%;
     margin-bottom: 10%;
+    border: solid #3e3e3e;
 }
 
 .tablaUf{
@@ -64,4 +88,8 @@
     margin-bottom: 10%;
     height: 60%;
     margin-top: 4%;
+}
+
+.table {
+    margin-bottom: 0px;
 }

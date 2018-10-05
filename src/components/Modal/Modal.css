@@ -11,11 +11,20 @@
     margin-top: 8px;
     height: 35px;
     line-height: 22px;
-    background: #7fc300;
+    background: #8fbe00;
     margin-bottom: 50px;
     margin-left: 30%;
 }
 
 .modal1{
   width: 1000px;
+}
+
+.modal-content{
+  width: 1002px;
+
+}
+
+.modal-dialog{
+  margin-left: 220px;
 }

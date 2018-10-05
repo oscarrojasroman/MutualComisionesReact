@@ -85,7 +85,7 @@ ul.Upload-file-list {
   height: 35px;
   line-height: 22px;
   border-radius: 5px !important;
-  background: #7fc300;
+  background: #8fbe00;
 }
 
 .fa.more-action {
@@ -163,8 +163,9 @@ border:solid;
 }
 
 .tab:hover {
-  background-color: #7fc300;
+  background-color: #8fbe00;
   color: white;
+  border-radius: 0%;
  
 }
 

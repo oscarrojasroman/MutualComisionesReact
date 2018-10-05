@@ -17,9 +17,9 @@ export default class TablaPyme2 extends Component {
     }
   render() {
     return (
-        <div> 
-            <caption className="caption">Pyme</caption>
-      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } className="tablapyme">          
+        <div className="tablapyme"> 
+            <p className="captionp">Pyme</p>
+      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
           <TableHeaderColumn  dataField='id' isKey={ true } className="headertable">Tramo</TableHeaderColumn>
           <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable">N° Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='comision' className="headertable">Comision</TableHeaderColumn>
