@@ -28,7 +28,7 @@ function FullWidthGrid(props) {
       <Grid className="wrapper1">
         <Grid className="tableCalculos" >
            <div className="card-header1 color-secundary">
-               <p className="p"><IoIosCalculator/> CALCULO</p>
+               <p className="p"><IoIosCalculator/> CÁLCULO</p>
             </div>
               <Tablas/>
         </Grid>       

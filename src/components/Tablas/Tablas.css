@@ -71,20 +71,19 @@
 
 .btnCalculos{
     color: white;
-    width: 40%;
+    width: 100%;
     margin-top: 8px;
     height: 35px;
     line-height: 22px;
     background: #7fc300;
     margin-bottom: 50px;
-    margin-left: 30%;
 }
 
 
 .tablaButton{
     width: 60%;   
     background: white;
-    margin-left: 20%;
+    margin-left: 18%;
     margin-bottom: 10%;
     height: 60%;
     margin-top: 4%;
@@ -92,4 +91,16 @@
 
 .table {
     margin-bottom: 0px;
+}
+
+.titleCalculo{
+    align-items: center;
+    color: #505050;
+    font-size: 1.7em;
+    margin-left: 47%;
+}
+
+.textCalculo{
+    color:#ababab;
+    
 }

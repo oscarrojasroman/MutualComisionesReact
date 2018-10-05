@@ -21,7 +21,7 @@ export default class TablaFullRegion2 extends Component {
             <p className="captionf">Full Region</p>
             <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >  
                     <TableHeaderColumn  dataField='id' isKey={ true }>Tramo</TableHeaderColumn>
-                    <TableHeaderColumn  dataField='cantidadTrabajadores'>N° Trabajadores</TableHeaderColumn>     
+                    <TableHeaderColumn  dataField='cantidadTrabajadores'>Trabajadores</TableHeaderColumn>     
                     <TableHeaderColumn  dataField='comision'>Comision</TableHeaderColumn>
                     <TableHeaderColumn  dataField='premio'>Premio</TableHeaderColumn>    
             </BootstrapTable>
