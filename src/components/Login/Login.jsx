@@ -46,21 +46,21 @@ handleSubmit(e) {
           <h2 className="l">Login</h2>
           <form name="form" onSubmit={this.handleSubmit}>
               <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                  <label>Email</label>
+                  <label>email</label>
                   <input type="text" className="form-control textBox" name="email" value={email} onChange={this.handleChange} />
                   {submitted && !email &&
                       <div className="help-block">Email is required</div>
                   }
               </div>
               <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                  <label>Contraseña</label>
+                  <label>Password</label>
                   <input type="password" className="form-control textBox" name="password" value={password} onChange={this.handleChange} />
                   {submitted && !password &&
                       <div className="help-block">Password is required</div>
                   }
               </div>
               <div className="form-group">
-                  <button className="btn btn-primary button">Iniciar Sesion</button>
+                  <button className="btn btn-primary button">Login</button>
                   {
                       loggingIn                      
                   }

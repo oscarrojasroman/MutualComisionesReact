@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Router, Route} from 'react-router-dom';
+import { Switch, Router, Route} from 'react-router-dom';
 import Home from '../components/Home/Home';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
@@ -21,9 +21,10 @@ import { store } from '../reducers/store';
 
 const mapStateToProps = ( state )=> {
   const { alert } = state;
+  const { loggingIn } = state.authentication;
   return {
     alert,
-   
+    loggingIn
 
   }
 };
@@ -37,25 +38,10 @@ const mapDispatchToProps = dispatch => ({
 
 class App extends Component {
  
-  componentWillReceiveProps(nextProps){
-    if(nextProps.redrectTo){
-      store.dispatch(push(nextProps.redrectTo));
-      this.props.onRedirect()
-    }
-  }
 
-  componentWillMount(){
-    const token = window.localStorage.getItem('jwt');
-    if(token){
-      agent.setToken(token);
-    }
-
-    this.props.onLoad(token ? agent.Auth.current() :null, token);
-  }
 
   render() {
     const { alert } = this.props;
-    
         return (      
                     <div className="grid responsive" >                    
                     <Router history={history}>
