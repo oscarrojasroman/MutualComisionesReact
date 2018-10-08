@@ -10,6 +10,7 @@
     "react-bootstrap-table-2": "^2.10.7",
     "react-burger-menu": "^2.5.2",
     "react-dom": "^16.2.0",
+    "react-files": "^2.4.7",
     "react-icons": "^3.1.0",
     "react-logger": "^1.1.0",
     "react-redux": "^5.0.7",

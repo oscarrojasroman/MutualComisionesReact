@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import 'react-tabs/style/react-tabs.css';
 import './CargaDeDatos.css'
-import { IoIosDocument } from 'react-icons/io';
+import { IoIosDocument, IoIosCloudUpload } from 'react-icons/io';
 
 
 const styles = theme => ({
@@ -31,15 +31,17 @@ function FullWidthGrid(props) {
                     <div className="card-header color-secundary">
                       <p className="p"><IoIosDocument/> CARGA DE ARCHIVOS</p>
                     </div>
-                    <br/>
-                    <input type="file" className="form-control-file inputFile" id="exampleFormControlFile1"/>
-                    <br/>
-                    <input type="file" className="form-control-file inputFile" id="exampleFormControlFile2"/>
-                    <br/>
-                    <input type="file" className="form-control-file inputFile" id="exampleFormControlFile3"/>
-                    <br/>
-                    <input type="file" className="form-control-file inputFile" id="exampleFormControlFile4"/> 
-                    <br/>                  
+                    <div>
+                      <br/>
+                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile1"/>
+                      <br/>
+                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile2"/>
+                      <br/>
+                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile3"/>
+                      <br/>
+                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile4"/> 
+                      <br/>
+                    </div>                  
                     <button className="btn btn-add-file p">Validar Archivos</button>
                 </div>
           

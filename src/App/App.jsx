@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Router, Route} from 'react-router-dom';
+import { Router, Route} from 'react-router-dom';
 import Home from '../components/Home/Home';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
@@ -9,12 +9,10 @@ import Calculo from '../containers/Calculo';
 import {PrivateRoute }  from '../components/PrivateRoute/PrivateRoute';
 import { history } from '../helpers';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
-import agent from '../reducers/agent';
-import { store } from '../reducers/store';
+
 
 
 
