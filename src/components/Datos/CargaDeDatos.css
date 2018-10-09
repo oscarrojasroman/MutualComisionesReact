@@ -114,6 +114,6 @@ ul.Upload-file-list {
     margin-right: auto;
 }  
 
-.filepond--root{
-    font-size: 1.3em;
+.filepond--drop-label label{
+    padding: 0%;
 }

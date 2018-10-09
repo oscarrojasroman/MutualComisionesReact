@@ -23,7 +23,6 @@ function FullWidthGrid(props) {
   const { classes } = props;
 
   return (
-
   <div className={classes.root}>   
       <Grid className="wrapper">
         <Grid className="calculateTable">
@@ -34,13 +33,13 @@ function FullWidthGrid(props) {
                     </div>
                     <div>
                       <br/>
-                       <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos" />
+                        <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Cotizacion.xlsx'/>
                       <br/>
-                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
+                        <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Planta.xlsx'/>
                       <br/>
-                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
+                        <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Ventas.xlsx'/>
                       <br/>
-                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
+                        <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Referidos.xlsx'/>
                       <br/>
                       
                     </div>                  
