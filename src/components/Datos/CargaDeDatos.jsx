@@ -5,7 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import 'react-tabs/style/react-tabs.css';
 import './CargaDeDatos.css'
 import { IoIosDocument, IoIosCloudUpload } from 'react-icons/io';
-
+import { FilePond, File, registerPlugin } from 'react-filepond';
+import 'filepond/dist/filepond.min.css';
 
 const styles = theme => ({
   root: {
@@ -33,14 +34,15 @@ function FullWidthGrid(props) {
                     </div>
                     <div>
                       <br/>
-                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile1"/>
+                       <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos" />
                       <br/>
-                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile2"/>
+                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
                       <br/>
-                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile3"/>
+                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
                       <br/>
-                        <IoIosCloudUpload className="iconCloud"/><input type="file" className="form-control-file inputFile" id="exampleFormControlFile4"/> 
+                        <FilePond allowMultiple={true} maxFiles={1} className="cargaArchivos"/>
                       <br/>
+                      
                     </div>                  
                     <button className="btn btn-add-file p">Validar Archivos</button>
                 </div>

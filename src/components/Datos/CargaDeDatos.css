@@ -107,3 +107,13 @@ ul.Upload-file-list {
     font-size: 2em;
     text-align: center;
 }
+
+.cargaArchivos{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+.filepond--root{
+    font-size: 1.3em;
+}
