@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
 
@@ -21,7 +21,7 @@ const cellEditProp = {
   mode: 'click'
 };
 
-export default class ClickToEditTable extends React.Component {
+export default class ClickToEditTable extends Component {
   render() {
     return (
       <div className="tabla">
