@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import 'react-tabs/style/react-tabs.css';
 import './CargaDeDatos.css'
-import { IoIosDocument, IoIosCloudUpload } from 'react-icons/io';
+import { IoIosDocument, IoIosCloudUpload} from 'react-icons/io';
 import { FilePond } from 'react-filepond';
 import './filepound.css';
 
@@ -13,9 +13,6 @@ const styles = theme => ({
     flexGrow: 1,
   },
 });
-
-const icon = <IoIosCloudUpload className="iconCloud"/>
-
 
 function FullWidthGrid(props) {
   const { classes } = props;
@@ -31,13 +28,25 @@ function FullWidthGrid(props) {
             </div>
             <div>
               <br />
-                <FilePond className="cargaArchivos" labelIdle='↑ Cargar Archivo Cotizacion.xlsx'/>
+              <div className="divGroup">
+                <IoIosCloudUpload className="iconCloud" />
+                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Cotizacion.xlsx' server="https://localhost:5001/api/plantArchiveValidation/validate" method="POST"/>
+              </div>                
               <br />
-                <FilePond className="cargaArchivos" labelIdle='↑ Cargar Archivo Planta.xlsx' />
+              <div className="divGroup">
+                <IoIosCloudUpload className="iconCloud"/>
+                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Planta.xlsx' />
+              </div>
               <br />
-                <FilePond className="cargaArchivos" labelIdle='↑ Cargar Archivo Ventas.xlsx' />
+              <div className="divGroup">
+                <IoIosCloudUpload className="iconCloud"/>
+                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Ventas.xlsx' />
+              </div>
               <br />
-                <FilePond className="cargaArchivos" labelIdle='↑ Cargar Archivo Referidos.xlsx' />
+              <div className="divGroup">
+                <IoIosCloudUpload className="iconCloud"/>
+                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Referidos.xlsx' />
+              </div>
               <br />
 
             </div>
