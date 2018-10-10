@@ -10,7 +10,7 @@ import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
-import { IoIosShuffle, IoIosCash, IoIosHand } from 'react-icons/io';
+import { IoIosShuffle, IoIosCash, IoIosHand,IoIosSave } from 'react-icons/io';
 import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 
 const styles = theme => ({
@@ -65,8 +65,9 @@ function FullWidthGrid(props) {
               <TablaMinTrab/>
             </TabPanel>
           </Tabs>           
-          
-        </Grid>       
+          <button className="btn btn-add-file p"><IoIosSave/>  Guardar Cambios</button>  
+        </Grid> 
+            
       </Grid>
     </div>
   );

@@ -27,7 +27,9 @@ export default class CalculoComision extends Component {
         return (
           <div>
             <Button bsStyle="primary" bsSize="large" className="btnCalculos"onClick={() => this.setState({ show: true })}>
-              <IoIosPlay/> Ejecutar Calculo
+              <IoIosPlay className="iconPlay"/>
+              <br/> 
+              Ejecutar  
             </Button>
     
             <Modal

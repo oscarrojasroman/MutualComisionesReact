@@ -175,6 +175,9 @@ border:solid;
 }
 
 .nav1{
-  margin-left: 0%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 0%;
+  width: 80%;
 }
+

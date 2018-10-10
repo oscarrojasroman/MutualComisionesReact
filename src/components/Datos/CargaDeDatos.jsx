@@ -30,7 +30,8 @@ function FullWidthGrid(props) {
               <br />
               <div className="divGroup">
                 <IoIosCloudUpload className="iconCloud" />
-                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Cotizacion.xlsx' server="https://localhost:5001/api/plantArchiveValidation/validate" method="POST"/>
+                <FilePond className="cargaArchivos" labelIdle='Cargar Archivo Cotizacion.xlsx' 
+                  server="http://localhost:5000/api/wwwroot/Comisiones" method="POST"/>
               </div>                
               <br />
               <div className="divGroup">
@@ -50,8 +51,9 @@ function FullWidthGrid(props) {
               <br />
 
             </div>
-            <button className="btn btn-add-file p">Validar Archivos</button>
-          </div>
+          </div>     
+                 <button className="btn btn-add-file p">Validar Archivos</button>
+
 
         </Grid>
       </Grid>
