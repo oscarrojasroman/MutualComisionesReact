@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^1.5.0",
     "filepond-plugin-file-validate-type": "^1.1.0",
+    "moment": "^2.22.2",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-bootstrap-table": "^4.3.1",
@@ -15,6 +16,7 @@
     "react-files": "^2.4.7",
     "react-icons": "^3.1.0",
     "react-logger": "^1.1.0",
+    "react-moment": "^0.8.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",

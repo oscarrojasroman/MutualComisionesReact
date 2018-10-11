@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
 import { config } from './../../helpers/config';
+import Moment from 'react-moment';
 
 const cellEditProp = {
   mode: 'click'
@@ -25,12 +26,21 @@ export default class ClickToEditTable extends Component {
     })
   }
 
+
+ 
   render() {
+
+    const dateFormatter = (cell) => (
+      <Moment format="DD/MM/YYYY">
+        {cell}
+      </Moment>
+    );
+
     return (
       <div className="tabla">
       <p className="captionuf">UF</p>
-      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >
-          <TableHeaderColumn dataField='date' isKey={ true }>FECHA UF</TableHeaderColumn>
+      <BootstrapTable data={ this.state.data} cellEdit={ cellEditProp } >
+          <TableHeaderColumn dataField='date' isKey={ true } dataFormat={dateFormatter}>FECHA UF</TableHeaderColumn> 
           <TableHeaderColumn dataField='value'>Valor UF</TableHeaderColumn>        
       </BootstrapTable>
       </div>
