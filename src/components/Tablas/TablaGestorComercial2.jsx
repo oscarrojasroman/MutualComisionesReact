@@ -21,10 +21,10 @@ export default class TablaGestorComercial extends Component {
         <div className="tablafull"> 
             <p className="captiong">Gestor Comercial</p>
       <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
-          <TableHeaderColumn  dataField='id' isKey={ true }>Tramo</TableHeaderColumn>
-          <TableHeaderColumn  dataField='cantidadTrabajadores'>Trabajadores</TableHeaderColumn>     
-          <TableHeaderColumn  dataField='comision'>Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='premio'>Premio</TableHeaderColumn>         
+          <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">Tramo</TableHeaderColumn>
+          <TableHeaderColumn  dataField='cantidadTrabajadores' dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='comision' dataAlign="center">Comision</TableHeaderColumn>
+          <TableHeaderColumn  dataField='premio' dataAlign="center">Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

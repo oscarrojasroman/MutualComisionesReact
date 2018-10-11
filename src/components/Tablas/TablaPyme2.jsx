@@ -20,10 +20,10 @@ export default class TablaPyme2 extends Component {
         <div className="tablapyme"> 
             <p className="captionp">Pyme</p>
       <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
-          <TableHeaderColumn  dataField='id' isKey={ true } className="headertable">Tramo</TableHeaderColumn>
-          <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable">Trabajadores</TableHeaderColumn>     
-          <TableHeaderColumn  dataField='comision' className="headertable">Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='premio' className="headertable">Premio</TableHeaderColumn>         
+          <TableHeaderColumn  dataField='id' isKey={ true } className="headertable" dataAlign="center">Tramo</TableHeaderColumn>
+          <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable" dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='comision' className="headertable" dataAlign="center">Comision</TableHeaderColumn>
+          <TableHeaderColumn  dataField='premio' className="headertable" dataAlign="center">Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

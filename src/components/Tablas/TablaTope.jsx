@@ -27,8 +27,8 @@ export default class TablaTope extends Component {
       <div className="tabla">
         <p className="captionuf">UF</p>
         <BootstrapTable data={ tope } cellEdit={ cellEditProp } >          
-            <TableHeaderColumn  dataField='id' isKey={ true }>TOPE ID</TableHeaderColumn>
-            <TableHeaderColumn  dataField='price'>Valor TOPE</TableHeaderColumn>        
+            <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">TOPE ID</TableHeaderColumn>
+            <TableHeaderColumn  dataField='price' dataAlign="center">Valor TOPE</TableHeaderColumn>        
         </BootstrapTable>
       </div>
     );

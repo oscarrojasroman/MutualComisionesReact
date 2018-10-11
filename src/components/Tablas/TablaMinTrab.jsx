@@ -20,9 +20,9 @@ export default class TablaMinTrab extends Component {
         <div className="tablaMeta"> 
             <p className="captionp">Meta Mensual</p>
                 <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
-                    <TableHeaderColumn  dataField='id' isKey={ true } className="headertable">Id</TableHeaderColumn>
-                    <TableHeaderColumn  dataField='rango' className="headertable">Rango</TableHeaderColumn>     
-                    <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable">Trabajadores</TableHeaderColumn>
+                    <TableHeaderColumn  dataField='id' isKey={ true } className="headertable" dataAlign="center">Id</TableHeaderColumn>
+                    <TableHeaderColumn  dataField='rango' className="headertable" dataAlign="center">Rango</TableHeaderColumn>     
+                    <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable" dataAlign="center">Trabajadores</TableHeaderColumn>
                 </BootstrapTable>
       </div>
        

@@ -124,3 +124,8 @@
     border: solid;
     margin-left: 30%;
 }
+
+.react-bs-table-tool-bar {
+    height: 35px;
+    float: right;
+}
