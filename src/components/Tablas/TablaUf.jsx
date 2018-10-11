@@ -1,34 +1,37 @@
 import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
-
-const uf = [];
-
-function addUf(quantity) {
-  const startId = uf.length;
-  for (let i = 1; i < quantity; i++) {
-    const id = startId + i;
-    uf.push({
-      id: id,
-      price: 29150.44 + i 
-    });
-  }
-}
-
-addUf(5);
+import { config } from './../../helpers/config';
 
 const cellEditProp = {
   mode: 'click'
 };
 
 export default class ClickToEditTable extends Component {
+  constructor(){
+    super();
+    this.state={
+      data:[]
+    }
+  }
+
+  componentDidMount(){
+    fetch(config.apiUrl + '/Ufparameter').then((Response)=>Response.json()).
+    then((findresponse)=>{
+      console.log(findresponse)
+      this.setState({
+        data:findresponse
+      })
+    })
+  }
+
   render() {
     return (
       <div className="tabla">
       <p className="captionuf">UF</p>
-      <BootstrapTable data={ uf } cellEdit={ cellEditProp } >
-          <TableHeaderColumn dataField='id' isKey={ true }>UF ID</TableHeaderColumn>
-          <TableHeaderColumn dataField='price'>Valor UF</TableHeaderColumn>        
+      <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >
+          <TableHeaderColumn dataField='date' isKey={ true }>FECHA UF</TableHeaderColumn>
+          <TableHeaderColumn dataField='value'>Valor UF</TableHeaderColumn>        
       </BootstrapTable>
       </div>
     );
