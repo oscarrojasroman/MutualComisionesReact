@@ -1,30 +1,42 @@
 import React, { Component } from 'react';
 import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
+import { config } from './../../helpers/config';
 
 const cellEditProp = {
   mode: 'click'
 };
 
 export default class TablaFullRegion2 extends Component {
-    state = {
-        data:[
-            {id: 1,cantidadTrabajadores: 10, comision:0.17, premio: 0},
-            {id: 2,cantidadTrabajadores: 50, comision:0.17, premio: 0.2},
-            {id: 3,cantidadTrabajadores: 100, comision:0.17, premio: 0.18},
-            {id: 4,cantidadTrabajadores: 300, comision:0.18, premio: 0.24}
-        ]
-    }
+    constructor(){
+        super();
+        this.state={
+          data:[]
+        }
+      }
+    
+      componentDidMount(){
+        fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json()).
+        then((findresponse)=>{
+          console.log(findresponse)
+          this.setState({
+            data:findresponse
+          })
+        })
+      }
+
+      
+
   render() {
+    let fullList = this.state.data.filter(dat => dat.employeeMacroSegment === 'Full').map(dat => dat);
     return (
         <div className="tablafull">
             <p className="captionf">Full Region</p>
             <div>
-                <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >  
-                    <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">Tramo</TableHeaderColumn>
-                    <TableHeaderColumn  dataField='cantidadTrabajadores' dataAlign="center">Trabajadores</TableHeaderColumn>     
-                    <TableHeaderColumn  dataField='comision' dataAlign="center">Comision</TableHeaderColumn>
-                    <TableHeaderColumn  dataField='premio' dataAlign="center">Premio</TableHeaderColumn>    
+                <BootstrapTable data={ fullList } cellEdit={ cellEditProp } >  
+                    <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
+                    <TableHeaderColumn  dataField='commissionFactor' dataAlign="center">Comision</TableHeaderColumn>
+                    <TableHeaderColumn  dataField='commissionGift' dataAlign="center">Premio</TableHeaderColumn>    
             </BootstrapTable>
             </div>
             
