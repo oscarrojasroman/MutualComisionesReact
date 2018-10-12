@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     const { alert } = this.props;
         return (      
-                    <div className="grid responsive" >                    
+                    <div className="grid" >                    
                     <Router history={history}>
                       <div>
                           <Navbar />                      

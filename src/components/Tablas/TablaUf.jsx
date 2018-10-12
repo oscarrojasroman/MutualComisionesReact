@@ -19,7 +19,7 @@ export default class ClickToEditTable extends Component {
   componentDidMount(){
     fetch(config.apiUrl + '/Ufparameter').then((Response)=>Response.json()).
     then((findresponse)=>{
-      console.log(findresponse)
+      //console.log(findresponse)
       this.setState({
         data:findresponse
       })
@@ -37,7 +37,7 @@ export default class ClickToEditTable extends Component {
     );
 
     return (
-      <div className="tabla">
+      <div className="tablaU">
       <p className="captionuf">UF</p>
       <BootstrapTable data={ this.state.data} cellEdit={ cellEditProp } insertRow>
           <TableHeaderColumn dataField='date' isKey={ true } dataFormat={dateFormatter} dataAlign="center">FECHA UF</TableHeaderColumn> 

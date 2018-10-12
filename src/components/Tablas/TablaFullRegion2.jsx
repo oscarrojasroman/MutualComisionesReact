@@ -18,7 +18,7 @@ export default class TablaFullRegion2 extends Component {
       componentDidMount(){
         fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json()).
         then((findresponse)=>{
-          console.log(findresponse)
+          //console.log(findresponse)
           this.setState({
             data:findresponse
           })
@@ -28,7 +28,7 @@ export default class TablaFullRegion2 extends Component {
       
 
   render() {
-    let fullList = this.state.data.filter(dat => dat.employeeMacroSegment === 'Full').map(dat => dat);
+    let fullList = this.state.data.filter(dat => dat.sellerType === 'Full').map(dat => dat);
     return (
         <div className="tablafull">
             <p className="captionf">Full Region</p>

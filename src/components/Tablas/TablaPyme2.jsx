@@ -18,7 +18,7 @@ export default class TablaPyme2 extends Component {
       componentDidMount(){
         fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json()).
         then((findresponse)=>{
-          console.log(findresponse)
+          //console.log(findresponse)
           this.setState({
             data:findresponse
           })
@@ -26,8 +26,8 @@ export default class TablaPyme2 extends Component {
       }
 
   render() {
-    let dataList = this.state.data.filter(dat => dat.employeeMacroSegment === 'Pyme').map(dat => dat);
-    
+    let dataList = this.state.data.filter(dat => dat.sellerType === 'Pyme').map(dat => dat);
+
     return (
         <div className="tablapyme"> 
             <p className="captionp">Pyme</p>

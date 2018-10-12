@@ -21,7 +21,7 @@ const cellEditProp = {
   mode: 'click'
 };
 
-export default class TablaTope extends Component {
+export default class TablaMeses extends Component {
   render() {
     return (
       <div className="tabla">

@@ -17,7 +17,7 @@ export default class TablaGestorComercial extends Component {
       }
     
       componentDidMount(){
-        fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json()).
+        fetch(config.apiUrl + '/BigAcountParameter').then((Response)=>Response.json()).
         then((findresponse)=>{
           //console.log(findresponse)
           this.setState({
@@ -26,14 +26,14 @@ export default class TablaGestorComercial extends Component {
         })
       }
   render() {
-    let dataList = this.state.data.filter(dat => dat.sellerType === 'Gestor Comercial').map(dat => dat);
+    let dataList = this.state.data.filter(dat => dat.employeeMacroSegment === 'Gestor Comercial').map(dat => dat);
     return (
         <div className="tablafull"> 
-            <p className="captiong">Gestor Comercial</p>
+            <p className="captiong">Grandes Cuentas</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } >          
-          <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
-          <TableHeaderColumn  dataField='commissionFactor' dataAlign="center">Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='commissionGift' dataAlign="center">Premio</TableHeaderColumn>         
+          <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='fulfilmentBonus' dataAlign="center">Comision</TableHeaderColumn>
+          <TableHeaderColumn  dataField='minimunFulfilmentAmount' dataAlign="center">Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

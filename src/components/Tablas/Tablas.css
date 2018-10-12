@@ -2,7 +2,7 @@
     text-align: center;
     background-color: #505050;
     color: white;
-    width: 308px;
+    width: 100%;
     padding: 0;
     height: 35px;
     margin-bottom: 0%;
@@ -12,7 +12,7 @@
     text-align: center;
     background-color: #505050;
     color: white;
-    width: 311px;
+    width: 100%;
     padding: 0;
     margin-bottom: 0%;
     height: 35px;
@@ -127,5 +127,14 @@
 
 .react-bs-table-tool-bar {
     height: 35px;
-    float: right;
+    float: left;
+}
+
+.tablaU{
+    width: 60%;   
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    border: solid #3e3e3e;
 }
