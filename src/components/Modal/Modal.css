@@ -13,7 +13,10 @@
     line-height: 22px;
     background: #8fbe00;
     margin-bottom: 50px;
-    margin-left: 30%;
+    margin-left: 20%;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 
 .modal1{
@@ -31,4 +34,16 @@
 
 .iconPlay{
   font-size: 2.5em;
+  text-align: center;
 }
+
+.modalResultado{
+    width: 1000px;
+    height: 419px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;   
+
+}
+
+

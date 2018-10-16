@@ -8,7 +8,7 @@ const cellEditProp = {
   mode: 'click'
 };
 
-export default class TablaGestorComercial extends Component {
+export default class TablaGrandesCuentas extends Component {
     constructor(){
         super();
         this.state={

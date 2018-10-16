@@ -107,14 +107,15 @@
     align-items: center;
     color: #505050;
     font-size: 1.7em;
-    margin-left: 47%;
+    margin-left: 40%;
     
 }
 
 .textCalculo{
     color:#ababab;
     text-align: center;
-    margin-left: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tablaMeta{
