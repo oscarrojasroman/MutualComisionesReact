@@ -66,8 +66,9 @@ ul.Upload-file-list {
     line-height: 22px;
     border-radius: 5px !important;
     background: #8fbe00;
-    margin-left: auto;
+    margin-left: 30%;
     margin-right: auto;
+    margin-bottom: 5%;
 }
 
 .fa.more-action {
@@ -103,7 +104,10 @@ ul.Upload-file-list {
 .p{
     color: white;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 1.3em;   
+}
+
+.tituloCargaDatos{
     margin-left: 30%;
     margin-bottom: 5%;
 }

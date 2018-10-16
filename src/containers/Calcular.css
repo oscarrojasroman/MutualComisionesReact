@@ -76,13 +76,15 @@ ul.Upload-file-list {
 .btn-add-file1 {
   font-size: 1em;
   color: white;
-  width: 20%;
-  margin-top: 0px;
-  margin-left: 78%;
   height: 35px;
   line-height: 22px;
   border-radius: 5px !important;
   background: #8fbe00;
+}
+
+.btGroup{
+  margin-left: 60%;
+  margin-bottom: 5px;
 }
 
 .fa.more-action {
@@ -177,6 +179,11 @@ border:solid;
   margin-right: auto;
   padding-left: 0%;
   width: 100%;
+}
+
+.titleTable{
+  margin-right: 40px;
+
 }
 
 

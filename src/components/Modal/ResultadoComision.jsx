@@ -12,11 +12,15 @@ export default class ResultadoComision extends Component {
 
     constructor(props, context) {
         super(props, context);
+
+        var today = new Date(),
+            date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     
         this.handleHide = this.handleHide.bind(this);
     
         this.state = {
-          show: false
+          show: false,
+          date:date
         };
       }
     
@@ -39,7 +43,7 @@ export default class ResultadoComision extends Component {
               aria-labelledby="contained-modal-title"
             >
               <Modal.Header closeButton>
-                <h1 id="contained-modal-title">
+                <h1 id="contained-modal-title" className="center">
                  Calculo Comision
                 </h1>
               </Modal.Header>
@@ -58,7 +62,7 @@ export default class ResultadoComision extends Component {
                     <td>1</td>
                     <td>OCRE SPA</td>
                     <td>272606</td>
-                    <td></td>
+                    <td> {this.state.date} </td>
                   </tr>
                 </tbody>
               </Table>

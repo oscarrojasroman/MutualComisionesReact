@@ -24,7 +24,7 @@ function FullWidthGrid(props) {
 
           <div className="form-group">
             <div className="card-header color-secundary">
-              <p className="p"><IoIosDocument /> CARGA DE ARCHIVOS</p>
+              <p className="p tituloCargaDatos"><IoIosDocument /> CARGA DE ARCHIVOS</p>
             </div>
             <div>
               <br />
@@ -55,7 +55,7 @@ function FullWidthGrid(props) {
 
             </div>
           </div>     
-                 <button className="btn btn-add-file p">Validar Archivos</button>
+                 <button className="btn btn-add-file p ">Validar Archivos</button>
 
 
         </Grid>

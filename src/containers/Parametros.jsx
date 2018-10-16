@@ -13,6 +13,7 @@ import TablaTope from '../components/Tablas/TablaTope';
 import { IoIosShuffle, IoIosCash, IoIosHand,IoIosSave } from 'react-icons/io';
 import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 import TablaMeses from '../components/Tablas/TablaMeses';
+import { Button } from 'react-bootstrap';
 
 const styles = theme => ({
   root: {
@@ -97,8 +98,11 @@ function FullWidthGrid(props) {
               </TabPanel>
              
           </Tabs> 
-          <button className="btn btn-add-file1"><IoIosSave/>  Guardar Cambios</button>      
-          <button className="btn btn-add-file1"><IoIosSave/>  Guardar Cambios</button>
+          <div className="btn-group btGroup">
+            <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>      
+            <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>
+          </div>
+          
         </Grid> 
             
       </Grid>

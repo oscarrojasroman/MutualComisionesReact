@@ -39,7 +39,7 @@ export default class CalculoComision extends Component {
              
             >
               <Modal.Header closeButton>
-                <h1 id="contained-modal-title">
+                <h1 id="contained-modal-title " className="center">
                  Calculo Comision
                 </h1>
               </Modal.Header>
