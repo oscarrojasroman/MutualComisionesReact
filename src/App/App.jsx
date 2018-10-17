@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Router, Route} from 'react-router-dom';
+import { Router, Route, Switch} from 'react-router-dom';
 import Home from '../components/Home/Home';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
@@ -15,13 +15,11 @@ import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
 import { alertActions } from '../actions';
 
 
-
-
 const mapStateToProps = ( state )=> {
   const { alert } = state;
   return {
     alert,
-    
+    loggedIn: state.authentication.loggedIn
 
   }
 };
@@ -44,26 +42,36 @@ class App extends Component {
 
   render() {
     const { alert } = this.props;
+    const { loggedIn } = this.props;
+    if(loggedIn === true )
+    {
+      return (      
+        <div className="grid" >                    
+        <Router history={history}>
+          <div>                            
+                <Navbar />                      
+                <SideBar2 />                     
+                <PrivateRoute exact path="/" component={Home} />                     
+                <PrivateRoute path="/parametros" component={Calcular} />
+                <PrivateRoute path="/calcular" component={Calculo} />
+                <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
+                <PrivateRoute path="/#"/>
+                <Route path="/login" component={Login} />                               
+          </div>  
+                          
+        </Router>
+        {
+              alert.message &&
+                <div className={`alert ${alert.type}`}>{alert.message}</div>
+        }
+      </div>
+      );
+    }
         return (      
-                    <div className="grid" >                    
-                    <Router history={history}>
-                      <div>
-                          <Navbar />                      
-                          <SideBar2 />
-                          <PrivateRoute exact path="/" component={Home} />                     
-                          <PrivateRoute path="/parametros" component={Calcular} />
-                          <PrivateRoute path="/calcular" component={Calculo} />
-                          <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
-                          <PrivateRoute path="/#"/>
-                          <Route path="/login" component={Login} />                               
-                      </div>  
-                                      
-                    </Router>
-                    {
-                          alert.message &&
-                            <div className={`alert ${alert.type}`}>{alert.message}</div>
-                    }
-                  </div>
+                            
+                            <Route path="/" component={Login} />                               
+                     
+                  
         );
   }
 }
