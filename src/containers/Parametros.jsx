@@ -10,10 +10,12 @@ import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
-import { IoIosShuffle, IoIosCash, IoIosHand,IoIosSave } from 'react-icons/io';
+import { IoIosShuffle, IoIosCash, IoIosHand,IoIosSave, IoIosAdd } from 'react-icons/io';
 import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 import TablaMeses from '../components/Tablas/TablaMeses';
 import { Button } from 'react-bootstrap';
+import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
+import TablaVeda from '../components/Tablas/TablaVeda';
 
 const styles = theme => ({
   root: {
@@ -86,21 +88,21 @@ function FullWidthGrid(props) {
               {/* TAB GRANDES CUENTAS*/}
               <TabPanel>
                 <div className="tUf">
-                <TablaUf/>
+                <TablaGrandesCuentas/>
                 </div>
               </TabPanel>
 
               {/* TAB VEDA*/}
               <TabPanel>
                 <div className="tUf">
-                <TablaUf/>
+                <TablaVeda/>
                 </div>
               </TabPanel>
              
           </Tabs> 
           <div className="btn-group btGroup">
             <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>      
-            <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>
+            <Button className="btn-add-file1"><IoIosAdd/>  Agregar </Button>
           </div>
           
         </Grid> 

@@ -8,7 +8,7 @@ const cellEditProp = {
   mode: 'click'
 };
 
-export default class TablaGrandesCuentas extends Component {
+export default class TablaVeda extends Component {
     constructor(){
         super();
         this.state={
@@ -29,11 +29,10 @@ export default class TablaGrandesCuentas extends Component {
     let dataList = this.state.data.filter(dat => dat.employeeMacroSegment === 'Gestor Comercial').map(dat => dat);
     return (
         <div className="tablaU"> 
-            <p className="captiong">Grandes Cuentas</p>
+            <p className="captiong">Veda</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } >          
-          <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Fecha</TableHeaderColumn>     
           <TableHeaderColumn  dataField='fulfilmentBonus' dataAlign="center">Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='minimunFulfilmentAmount' dataAlign="center">Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

@@ -42,7 +42,6 @@ export default class ClickToEditTable extends Component {
       <BootstrapTable data={ this.state.data} cellEdit={ cellEditProp }>
           <TableHeaderColumn dataField='date' isKey={ true } dataFormat={dateFormatter} dataAlign="center" >FECHA UF</TableHeaderColumn> 
           <TableHeaderColumn dataField='value' dataAlign="center">Valor UF</TableHeaderColumn>    
-         
       </BootstrapTable>
       </div>
     );

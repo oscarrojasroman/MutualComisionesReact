@@ -139,3 +139,9 @@
     margin-bottom: 10%;
     border: solid #3e3e3e;
 }
+
+.headerText{
+  overflow: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
