@@ -7,7 +7,7 @@ class Tablas extends Component {
         return (
             <div className="tablaButton">
                 <h3 className="titleCalculo">CÁLCULO</h3>
-                <p className="textCalculo">Resultado del calculo de comision</p>
+                <p className="textCalculo">Resultado de calculo de comision</p>
                 <ResultadoComision/>      
             </div>
         );

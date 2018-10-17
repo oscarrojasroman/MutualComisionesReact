@@ -59,9 +59,9 @@ export default class ResultadoComision extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>OCRE SPA</td>
-                    <td>272606</td>
+                    <td>Ejemplo</td>
+                    <td>11.111.111-1</td>
+                    <td>202.000.000</td>
                     <td> {this.state.date} </td>
                   </tr>
                 </tbody>

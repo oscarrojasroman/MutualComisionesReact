@@ -3,7 +3,7 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'https://localhost:5001/api';
+const API_ROOT = 'https://localhost:5000/api';
 
 const responseBody = res => res.body;
 
@@ -27,9 +27,9 @@ const requests = {
 
 const Auth = {
   current: () =>
-    requests.get('/user'),
+    requests.get('/account'),
   login: (email, password) =>
-    requests.post('/users/login', { user: { email, password } })
+    requests.post('/account/login', { user: { email, password } })
 };
 
 

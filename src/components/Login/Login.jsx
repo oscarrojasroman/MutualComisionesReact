@@ -11,8 +11,8 @@ class Login extends Component {
 
 
     this.state = {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
       submitted: false
     };
 

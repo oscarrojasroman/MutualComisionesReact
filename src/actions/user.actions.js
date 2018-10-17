@@ -19,6 +19,7 @@ function login(email, password) {
             .then(
                 user => { 
                     dispatch(success(user));
+                    console.log("Estoy Logeado");
                     history.push('/');
                 },
                 error => {
@@ -77,7 +78,6 @@ function getAll() {
     function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
 }
 
-// prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
     return dispatch => {
         dispatch(request(id));

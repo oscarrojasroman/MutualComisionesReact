@@ -12,17 +12,16 @@ import { connect } from 'react-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
-
+import { alertActions } from '../actions';
 
 
 
 
 const mapStateToProps = ( state )=> {
   const { alert } = state;
-  const { loggingIn } = state.authentication;
   return {
     alert,
-    loggingIn
+    
 
   }
 };
@@ -35,8 +34,13 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
- 
+  constructor(props) {
+    super(props);
 
+    const { dispatch } = this.props;
+   
+
+  }
 
   render() {
     const { alert } = this.props;
