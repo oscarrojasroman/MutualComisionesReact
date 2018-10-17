@@ -6,7 +6,7 @@ import img from '../../img/bienvenido.png';
 export default class Home extends Component {
   render() {
     return (
-     <div className="fondo">
+     <div>
        <img src={img} alt="Welcome" className="welcome"></img>
      </div>
     )

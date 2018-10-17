@@ -8,6 +8,6 @@
   }
 
 .fondo{
-  height: 200%;
+  height: 200% !important;
   width: auto;
 }
