@@ -3,6 +3,7 @@ import "./Login.css";
 import logo from "./../../img/logo2.png";
 import { connect } from 'react-redux';
 import { userActions } from '../../actions';
+import { IoIosKey, IoIosPerson } from "react-icons/io";
 
 class Login extends Component {
   constructor(props) {
@@ -43,17 +44,16 @@ handleSubmit(e) {
       <div className="Login">
       <img src={logo} alt="Logo Mutual" className="logo2" />
         <h3 className="h3">Pagos de Comisíon</h3>
-          <h2 className="l">Login</h2>
           <form name="form" onSubmit={this.handleSubmit}>
               <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                  <label>email</label>
+                  <IoIosPerson/><label> Usuario</label>
                   <input type="text" className="form-control textBox" name="email" value={email} onChange={this.handleChange} />
                   {submitted && !email &&
                       <div className="help-block">Email is required</div>
                   }
               </div>
               <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                  <label>Password</label>
+                  <IoIosKey/><label> Contraseña</label>
                   <input type="password" className="form-control textBox" name="password" value={password} onChange={this.handleChange} />
                   {submitted && !password &&
                       <div className="help-block">Password is required</div>
