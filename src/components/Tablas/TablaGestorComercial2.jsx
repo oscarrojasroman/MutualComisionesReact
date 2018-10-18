@@ -8,6 +8,10 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+  noDataText: 'Cargando....'
+}
+
 export default class TablaGestorComercial extends Component {
     constructor(){
         super();
@@ -30,7 +34,7 @@ export default class TablaGestorComercial extends Component {
     return (
         <div className="tablafull"> 
             <p className="captiong">Gestor Comercial</p>
-      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } >          
+      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
           <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='commissionFactor' dataAlign="center">Comision</TableHeaderColumn>
           <TableHeaderColumn  dataField='commissionGift' dataAlign="center">Premio</TableHeaderColumn>         

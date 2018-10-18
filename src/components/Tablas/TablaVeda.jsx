@@ -8,6 +8,11 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+  noDataText: 'Cargando....'
+}
+
+
 export default class TablaVeda extends Component {
     constructor(){
         super();
@@ -30,7 +35,7 @@ export default class TablaVeda extends Component {
     return (
         <div className="tablaU"> 
             <p className="captiong">Veda</p>
-      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } >          
+      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
           <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Fecha</TableHeaderColumn>     
           <TableHeaderColumn  dataField='fulfilmentBonus' dataAlign="center">Comision</TableHeaderColumn>
       </BootstrapTable>

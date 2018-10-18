@@ -21,12 +21,17 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+  noDataText: 'Cargando....'
+}
+
+
 export default class TablaTope extends Component {
   render() {
     return (
       <div className="tabla">
         <p className="captionuf">Tope de Remuneracion</p>
-        <BootstrapTable data={ tope } cellEdit={ cellEditProp } >          
+        <BootstrapTable data={ tope } cellEdit={ cellEditProp } hover = { true }  options={options}>          
             <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">FECHA</TableHeaderColumn>
             <TableHeaderColumn  dataField='price' dataAlign="center" >VALOR</TableHeaderColumn>        
         </BootstrapTable>

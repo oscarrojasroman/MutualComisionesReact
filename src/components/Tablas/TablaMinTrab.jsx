@@ -6,6 +6,11 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+    noDataText: 'Cargando....'
+  }
+  
+
 export default class TablaMinTrab extends Component {
     state = {
         data:[
@@ -19,7 +24,7 @@ export default class TablaMinTrab extends Component {
     return (
         <div className="tablaMeta"> 
             <p className="captionp">Meta Mensual</p>
-                <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } >          
+                <BootstrapTable data={ this.state.data } cellEdit={ cellEditProp } hover = { true }  options={options}>          
                     <TableHeaderColumn  dataField='id' isKey={ true } className="headertable" dataAlign="center">Id</TableHeaderColumn>
                     <TableHeaderColumn  dataField='rango' className="headertable" dataAlign="center">Rango</TableHeaderColumn>     
                     <TableHeaderColumn  dataField='cantidadTrabajadores' className="headertable" dataAlign="center">Trabajadores</TableHeaderColumn>

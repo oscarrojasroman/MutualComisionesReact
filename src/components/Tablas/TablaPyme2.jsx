@@ -7,6 +7,10 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+  noDataText: 'Cargando....'
+}
+
 export default class TablaPyme2 extends Component {
     constructor(){
         super();
@@ -31,7 +35,7 @@ export default class TablaPyme2 extends Component {
     return (
         <div className="tablapyme"> 
             <p className="captionp">Pyme</p>
-      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } >          
+      <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
           <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } className="headertable" dataAlign="center">Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='commissionFactor' className="headertable" dataAlign="center">Comision</TableHeaderColumn>
           <TableHeaderColumn  dataField='commissionGift' className="headertable" dataAlign="center">Premio</TableHeaderColumn>         

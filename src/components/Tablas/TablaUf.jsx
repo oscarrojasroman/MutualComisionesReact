@@ -8,6 +8,11 @@ const cellEditProp = {
   mode: 'click'
 };
 
+var options = {
+  noDataText: 'Cargando....'
+}
+
+
 export default class ClickToEditTable extends Component {
   constructor(){
     super();
@@ -39,7 +44,7 @@ export default class ClickToEditTable extends Component {
     return (
       <div className="tablaU">
       <p className="captionuf">UF</p>
-      <BootstrapTable data={ this.state.data} cellEdit={ cellEditProp }>
+      <BootstrapTable data={ this.state.data} cellEdit={ cellEditProp } hover = { true }  options={options}>
           <TableHeaderColumn dataField='date' isKey={ true } dataFormat={dateFormatter} dataAlign="center" >FECHA UF</TableHeaderColumn> 
           <TableHeaderColumn dataField='value' dataAlign="center">Valor UF</TableHeaderColumn>    
       </BootstrapTable>
