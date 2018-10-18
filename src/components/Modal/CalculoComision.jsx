@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
  
 
 import './Modal.css';
+import { config } from '../../helpers';
 
 
 export default class CalculoComision extends Component {
@@ -116,6 +117,7 @@ export default class CalculoComision extends Component {
               </Modal.Body>
                 <Modal.Footer>
                 <Button bsStyle="primary">Ejecutar</Button>
+                <Button >Excel</Button>
                 <Button onClick={this.handleHide}>Close</Button>
               </Modal.Footer>
             </Modal>

@@ -20,8 +20,8 @@ export default class TablaPyme2 extends Component {
       }
     
       componentDidMount(){
-        fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json()).
-        then((findresponse)=>{
+        fetch(config.apiUrl + '/SellerRangeparameter').then((Response)=>Response.json())
+        .then((findresponse)=>{
           //console.log(findresponse)
           this.setState({
             data:findresponse

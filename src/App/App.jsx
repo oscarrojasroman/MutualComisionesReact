@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Router, Route, Switch} from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import Home from '../components/Home/Home';
 import Navbar from '../components/NavBar/CustomNavbar';
 import { Login } from '../components/Login';
@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/Datos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
-import { alertActions } from '../actions';
+
 
 
 const mapStateToProps = ( state )=> {
@@ -32,14 +32,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    const { dispatch } = this.props;
-   
-
-  }
-
+  
   render() {
     const { alert } = this.props;
     const { loggedIn } = this.props;

@@ -3,6 +3,7 @@ import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
 import { config } from './../../helpers/config';
 import Moment from 'react-moment';
+import { CSVLink } from "react-csv";
 
 const cellEditProp = {
   mode: 'click'
@@ -22,8 +23,8 @@ export default class ClickToEditTable extends Component {
   }
 
   componentDidMount(){
-    fetch(config.apiUrl + '/Ufparameter').then((Response)=>Response.json()).
-    then((findresponse)=>{
+    fetch(config.apiUrl + '/Ufparameter').then((Response)=>Response.json())
+    .then((findresponse)=>{
       //console.log(findresponse)
       this.setState({
         data:findresponse
@@ -48,6 +49,7 @@ export default class ClickToEditTable extends Component {
           <TableHeaderColumn dataField='date' isKey={ true } dataFormat={dateFormatter} dataAlign="center" >FECHA UF</TableHeaderColumn> 
           <TableHeaderColumn dataField='value' dataAlign="center">Valor UF</TableHeaderColumn>    
       </BootstrapTable>
+      
       </div>
     );
   }

@@ -25,8 +25,8 @@ export default class TablaFullRegion2 extends Component {
       
 
       componentDidMount(){
-        fetch(url).then((Response)=>Response.json()).
-        then((findresponse)=>{
+        fetch(url).then((Response)=>Response.json())
+        .then((findresponse)=>{
           //console.log(findresponse)
           this.setState({
             data:findresponse
