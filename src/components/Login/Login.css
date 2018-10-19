@@ -8,7 +8,8 @@
     }
   
     .Login form {
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
       max-width: 320px;
       padding: 20px;
       
@@ -22,16 +23,28 @@
       border-radius: 2em;
     }
 
-    .logo2 {
-        margin-top: 10%;
-        height: 90px;
-        margin-left: 35%;
-      }
+    .logo2 
+    { 
+        height: 90px;    
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .divImg
+    {
+      padding-top: 5%;
+    }
+
     
-      .h3{
-        height: 90px;
-        margin-left: 40%;
+      .h3
+      {
+        height: 40px;       
         color: white;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
       }
 
     .l{
