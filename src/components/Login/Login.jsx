@@ -49,14 +49,14 @@ handleSubmit(e) {
                   <IoIosPerson/><label> Usuario</label>
                   <input type="text" className="form-control textBox" name="email" value={email} onChange={this.handleChange} />
                   {submitted && !email &&
-                      <div className="help-block">Email is required</div>
+                      <div className="help-block">El Usuario es requerido</div>
                   }
               </div>
               <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                   <IoIosKey/><label> Contraseña</label>
                   <input type="password" className="form-control textBox" name="password" value={password} onChange={this.handleChange} />
                   {submitted && !password &&
-                      <div className="help-block">Password is required</div>
+                      <div className="help-block">La Contraseña es requerida</div>
                   }
               </div>
               <div className="form-group">

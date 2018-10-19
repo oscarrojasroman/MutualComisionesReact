@@ -1,7 +1,5 @@
-import superagentPromise from 'superagent-promise';
-import _superagent from 'superagent';
+import axios from 'axios';
 
-const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = 'https://localhost:5000/api';
 
@@ -16,13 +14,13 @@ const tokenPlugin = req => {
 
 const requests = {
   del: url =>
-    superagent.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
+    axios.del(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
   get: url =>
-    superagent.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
+    axios.get(`${API_ROOT}${url}`).use(tokenPlugin).then(responseBody),
   put: (url, body) =>
-    superagent.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
+    axios.put(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody),
   post: (url, body) =>
-    superagent.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
+    axios.post(`${API_ROOT}${url}`, body).use(tokenPlugin).then(responseBody)
 };
 
 const Auth = {
