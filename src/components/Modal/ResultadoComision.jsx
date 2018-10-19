@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import {Table} from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 import CalculoComision from './CalculoComision';
  
 
@@ -69,9 +69,9 @@ export default class ResultadoComision extends Component {
               </Modal.Body>
                 <Modal.Footer>  
                     <div className="botonesEnLinea">
-                        <Button bsStyle="primary">Ejecutar</Button>
-                        <Button onClick={this.handleHide}>Close</Button>
+                    <ButtonGroup>                        
                         <CalculoComision />
+                    </ButtonGroup>
                     </div>              
                 
               </Modal.Footer>

@@ -4,9 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import 'react-tabs/style/react-tabs.css';
 import './CargaDeDatos.css'
-import { IoIosDocument, IoIosCloudUpload} from 'react-icons/io';
+import { IoIosDocument, IoIosCloudUpload, IoIosCheckmark} from 'react-icons/io';
 import { FilePond } from 'react-filepond';
 import './filepound.css';
+import { Button } from 'react-bootstrap';
 
 const styles = theme => ({
   root: {
@@ -55,7 +56,7 @@ function FullWidthGrid(props) {
 
             </div>
           </div>     
-                 <button className="btn btn-add-file p ">Validar Archivos</button>
+                 <Button className="btn-add-file p "><IoIosCheckmark className="iconCheck"/>Validar Archivos</Button>
 
 
         </Grid>

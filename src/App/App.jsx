@@ -10,7 +10,7 @@ import {PrivateRoute }  from '../components/PrivateRoute/PrivateRoute';
 import { history } from '../helpers';
 import { connect } from 'react-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
-import CargaDeDatos from '../components/Datos/CargaDeDatos';
+import CargaDeDatos from '../components/CargaDeDatos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
 
 
@@ -32,7 +32,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class App extends Component {
-  
+
   render() {
     const { alert } = this.props;
     const { loggedIn } = this.props;

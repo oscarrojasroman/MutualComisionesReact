@@ -29,7 +29,7 @@ export default class TablaMeses extends Component {
   render() {
     return (
       <div className="tabla">
-        <p className="captionuf">Tope de Remuneracion</p>
+        <p className="captionuf">Meses</p>
         <BootstrapTable data={ tope } cellEdit={ cellEditProp } hover = { true }  options={options}>          
             <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">FECHA</TableHeaderColumn>
             <TableHeaderColumn  dataField='price' dataAlign="center" >VALOR</TableHeaderColumn>        

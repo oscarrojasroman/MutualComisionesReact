@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import {Table} from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 
  
 
@@ -27,9 +27,11 @@ export default class CalculoComision extends Component {
       render() {
         return (
           <div>
-            <Button onClick={() => this.setState({ show: true })}>
-             Detalle 
+            <Button bsStyle="primary">Ejecutar</Button>
+            <Button onClick={() => this.setState({ show: true })}> Detalle 
             </Button>
+            
+            <Button onClick={this.handleHide}>Close</Button>
     
             <Modal
               show={this.state.show}
@@ -116,9 +118,12 @@ export default class CalculoComision extends Component {
               </Table>
               </Modal.Body>
                 <Modal.Footer>
-                <Button bsStyle="primary">Ejecutar</Button>
-                <Button >Excel</Button>
-                <Button onClick={this.handleHide}>Close</Button>
+                  <ButtonGroup>
+                    <Button bsStyle="primary">Ejecutar</Button>
+                    <Button >Excel</Button>
+                    <Button onClick={this.handleHide}>Close</Button>
+                  </ButtonGroup>
+               
               </Modal.Footer>
             </Modal>
           </div>
