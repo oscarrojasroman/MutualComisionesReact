@@ -5,7 +5,7 @@ import { IoIosArrowForward, IoIosHome, IoIosDocument, IoIosBuild, IoIosCalculato
 class SideBar2 extends Component {
     render() {
         return (        
-            <div>                
+                          
                 <div className="ul">
                     <div className="MenuAside-title-box">
                         <p className="MenuAside-title">MENÚ</p>
@@ -15,7 +15,7 @@ class SideBar2 extends Component {
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Parametros"><IoIosBuild/>Parametrizacion   <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular"><IoIosCalculator/>Calcular  <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Reporte"><IoIosClipboard/>Reporte   <IoIosArrowForward/></a></li>
-                </div>
+               
                 
             </div>
         );
