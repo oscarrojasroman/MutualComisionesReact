@@ -6,7 +6,7 @@ import { Button, ButtonGroup } from 'react-bootstrap';
  
 
 import './Modal.css';
-import { config } from '../../helpers';
+
 
 
 export default class CalculoComision extends Component {

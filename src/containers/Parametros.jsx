@@ -79,9 +79,9 @@ function FullWidthGrid(props) {
 
               {/* TAB GENERAL*/}
               <TabPanel>
-                <div className="tUf">
-                <TablaTope/>
-                <TablaMeses/>
+                <div className="tabGeneral">
+                  <TablaTope/>
+                  <TablaMeses/>
                 </div>
               </TabPanel>
 

@@ -28,7 +28,7 @@ var options = {
 export default class TablaMeses extends Component {
   render() {
     return (
-      <div className="tabla">
+      <div className="tablasGeneral">
         <p className="captionuf">Meses</p>
         <BootstrapTable data={ tope } cellEdit={ cellEditProp } hover = { true }  options={options}>          
             <TableHeaderColumn  dataField='id' isKey={ true } dataAlign="center">FECHA</TableHeaderColumn>

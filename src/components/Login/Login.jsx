@@ -47,9 +47,7 @@ handleSubmit(e) {
                 <img src={logo} alt="Logo Mutual" className="logo2" />
                 <h3 className="h3">Pagos de Comisíon</h3>
             </div>
-            <form name="form" onSubmit={this.handleSubmit}>
-              
-           
+            <form name="form" onSubmit={this.handleSubmit}>             
                 <div>
                    
                 </div>

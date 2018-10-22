@@ -3,7 +3,7 @@ import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Tablas.css';
 import { config } from './../../helpers/config';
 import Moment from 'react-moment';
-import { CSVLink } from "react-csv";
+
 
 const cellEditProp = {
   mode: 'click'

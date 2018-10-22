@@ -187,3 +187,6 @@ border:solid;
 }
 
 
+.tabGeneral{
+  display: flex;
+}
