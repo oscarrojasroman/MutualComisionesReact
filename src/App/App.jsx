@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     const { alert } = this.props;
     const { loggedIn } = this.props;
-    if(loggedIn === false )
+    if(loggedIn === true )
     {
       return (      
         <div className="grid" >                    
