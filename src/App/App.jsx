@@ -13,8 +13,6 @@ import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/CargaDeDatos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
 
-
-
 const mapStateToProps = ( state )=> {
   const { alert } = state;
   return {
@@ -31,6 +29,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({type:REDIRECT})
 });
 
+
 class App extends Component {
 
   render() {
@@ -43,13 +42,13 @@ class App extends Component {
         <Router history={history}>
           <div>                            
                 <Navbar />                      
-                <SideBar2 />                     
+                <SideBar2 />                                  
                 <PrivateRoute exact path="/" component={Home} />                     
                 <PrivateRoute path="/parametros" component={Calcular} />
                 <PrivateRoute path="/calcular" component={Calculo} />
                 <PrivateRoute path="/cargadearchivos" component={CargaDeDatos} />
                 <PrivateRoute path="/#"/>
-                <Route path="/login" component={Login} />                               
+                <Route path="/login" component={Login} />                          
           </div>  
                           
         </Router>
