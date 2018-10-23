@@ -57,7 +57,7 @@
 }
 
 .tablafull{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     width: 39.5%;
     background: white;
     border: solid;
@@ -152,4 +152,10 @@
     margin-bottom: 10%;
     border: solid #3e3e3e;
     margin-left: 10%;
+}
+
+.tablaGestor{
+    width: 39.5%;
+    background: white;
+    border: solid;
 }

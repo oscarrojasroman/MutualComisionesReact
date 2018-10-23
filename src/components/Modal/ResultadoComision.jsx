@@ -42,14 +42,14 @@ export default class ResultadoComision extends Component {
               container={this}
               aria-labelledby="contained-modal-title"
             >
-              <Modal.Header closeButton>
+              <Modal.Header closeButton className="modalHeader">
                 <img src={img} alt="check" className="checkResultado"/>
                 <div id="contained-modal-title" className="center">
                  Calculo Comision
                 </div>
               </Modal.Header>
               <Modal.Body>
-              <Table responsive>
+              <Table responsive className="tablaResultadoComision">
                 <thead>
                   <tr>
                     <th>Nombre</th>
@@ -68,7 +68,7 @@ export default class ResultadoComision extends Component {
                 </tbody>
               </Table>
               </Modal.Body>
-                <Modal.Footer>  
+                <Modal.Footer className="modalFooter">  
                     <div className="botonesEnLinea">
                     <ButtonGroup>                        
                         <CalculoComision />

@@ -7,6 +7,9 @@ import img from './../../img/checkResultado.jpeg';
 import './Modal.css';
 
 
+var options = {
+  noDataText: 'Cargando....'
+}
 
 export default class CalculoComision extends Component {
 
@@ -40,7 +43,7 @@ export default class CalculoComision extends Component {
               dialogClassName="custom-modal"
              
             >
-              <Modal.Header closeButton>
+              <Modal.Header closeButton className="modalHeader">
                 <img src={img} alt="check" className="checkResultado"/>
                 <div id="contained-modal-title " className="center">
                  Detalle Comision
@@ -49,15 +52,18 @@ export default class CalculoComision extends Component {
               </Modal.Header>
 
               <Modal.Body>
-                <BootstrapTable data={ [] } pagination>
-                    <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+                <BootstrapTable data={ [] } pagination options={options}>
+                    <TableHeaderColumn dataField='processNumber'isKey className="headers">Numero de Proceso</TableHeaderColumn>
+                    <TableHeaderColumn dataField='processDate' className="headers">Fecha</TableHeaderColumn>                   
+                    <TableHeaderColumn dataField={'fiscalId'+'verificatorDigit'} className="headers">RUT</TableHeaderColumn>
+                    <TableHeaderColumn dataField='name'className="headers">Nombre</TableHeaderColumn>
+                    <TableHeaderColumn dataField='paymentConcept'className="headers">Concepto de Pago</TableHeaderColumn>
+                    <TableHeaderColumn dataField='paymentAmount'className="headers">Monto</TableHeaderColumn>
                 </BootstrapTable>
               </Modal.Body>
 
-                <Modal.Footer>
-                  <ButtonGroup>
+                <Modal.Footer className="modalFooter">
+                  <ButtonGroup >
                     <Button bsStyle="primary">Ejecutar</Button>
                     <Button >Excel</Button>
                     <Button onClick={this.handleHide}>Close</Button>

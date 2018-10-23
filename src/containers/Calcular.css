@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     border-radius: 0%;
+    padding-top: 10px;
 }
 
 .btn-file {
@@ -84,7 +85,7 @@ ul.Upload-file-list {
 
 .btGroup{
   margin-left: 60%;
-  margin-bottom: 5px;
+  margin-bottom: 0%;
 }
 
 .fa.more-action {
@@ -105,7 +106,6 @@ ul.Upload-file-list {
 }
 
 .calculateTable1{
-margin-top: 20px;
 margin-right: 10%;
 margin-left: 25%;
 background: white;

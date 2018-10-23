@@ -32,7 +32,7 @@ export default class TablaGestorComercial extends Component {
   render() {
     let dataList = this.state.data.filter(dat => dat.sellerType === 'Gestor Comercial').map(dat => dat);
     return (
-        <div className="tablafull"> 
+        <div className="tablaGestor"> 
             <p className="captiong">Gestor Comercial</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
           <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     

@@ -36,7 +36,7 @@ function FullWidthGrid(props) {
   <div className={classes.root}>   
       <Grid className="wrapper3">
         <Grid className="calculateTable1" >
-          
+          <body>
           <Tabs>
             <TabList className="card-header1"> 
             <ul className="nav-justified nav1">         
@@ -100,10 +100,15 @@ function FullWidthGrid(props) {
               </TabPanel>
              
           </Tabs> 
-          <div className="btn-group btGroup">
-            <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>      
-            <Button className="btn-add-file1"><IoIosAdd/>  Agregar </Button>
-          </div>
+
+          </body>
+          <footer>
+            <div className="btGroup">
+              <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>      
+              <Button className="btn-add-file1"><IoIosAdd/>  Agregar </Button>
+            </div>
+          </footer>
+          
           
         </Grid> 
             

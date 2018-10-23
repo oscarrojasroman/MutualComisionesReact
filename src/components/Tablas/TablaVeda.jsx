@@ -36,8 +36,8 @@ export default class TablaVeda extends Component {
         <div className="tablaU"> 
             <p className="captiong">Veda</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
-          <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Fecha</TableHeaderColumn>     
-          <TableHeaderColumn  dataField='fulfilmentBonus' dataAlign="center">Comision</TableHeaderColumn>
+          <TableHeaderColumn  dataField='individualGoalMass' isKey={ true } dataAlign="center">Fecha Inicio</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='fulfilmentBonus' dataAlign="center">Fecha Final</TableHeaderColumn>
       </BootstrapTable>
       </div>
        

@@ -47,10 +47,30 @@
 
 .center{
  text-align: center;
+ font-size: 1.5em;
 }
 
 .checkResultado{
- margin-left: 38%;
+ margin-left: 37%;
 }
 
+.headers{
+  background-color: #959ca1;
+  
+}
 
+.tablaResultadoComision{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.5px solid #959ca1;
+}
+
+.modalHeader{
+  border-bottom: 0;
+}
+
+.modalFooter{
+  border-top: 0;
+  
+}
