@@ -42,10 +42,9 @@
   background: #505050;
   }
  
-.card-header p{
-  line-height: 49px;  
-  margin-left: auto;
-  margin-right: auto;
+.card-header1 p{
+  text-transform: uppercase;
+  font-size: 1.3em;  
 }
 
 .card-container {

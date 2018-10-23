@@ -6,6 +6,6 @@
   -o-background-size:cover;
   background-size:cover;
   background-position:center;
-  min-height: -webkit-fill-available;
+  min-height: stretch;
   overflow : auto; 
 }

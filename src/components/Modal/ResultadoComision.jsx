@@ -45,7 +45,7 @@ export default class ResultadoComision extends Component {
               <Modal.Header closeButton className="modalHeader">
                 <img src={img} alt="check" className="checkResultado"/>
                 <div id="contained-modal-title" className="center">
-                 Calculo Comision
+                 Cálculo Comision
                 </div>
               </Modal.Header>
               <Modal.Body>

@@ -55,7 +55,7 @@ export default class CalculoComision extends Component {
                 <BootstrapTable data={ [] } pagination options={options}>
                     <TableHeaderColumn dataField='processNumber'isKey className="headers">Numero de Proceso</TableHeaderColumn>
                     <TableHeaderColumn dataField='processDate' className="headers">Fecha</TableHeaderColumn>                   
-                    <TableHeaderColumn dataField={'fiscalId'+'verificatorDigit'} className="headers">RUT</TableHeaderColumn>
+                    <TableHeaderColumn dataField={'fiscalId'.concat('verificatorDigit')} className="headers">RUT</TableHeaderColumn>
                     <TableHeaderColumn dataField='name'className="headers">Nombre</TableHeaderColumn>
                     <TableHeaderColumn dataField='paymentConcept'className="headers">Concepto de Pago</TableHeaderColumn>
                     <TableHeaderColumn dataField='paymentAmount'className="headers">Monto</TableHeaderColumn>
