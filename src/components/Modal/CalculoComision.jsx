@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
-import {Table} from 'react-bootstrap';
 import { Button, ButtonGroup } from 'react-bootstrap';
-
- 
+import { BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import img from './../../img/checkResultado.jpeg';
 
 import './Modal.css';
 
@@ -42,81 +41,21 @@ export default class CalculoComision extends Component {
              
             >
               <Modal.Header closeButton>
-                <h1 id="contained-modal-title " className="center">
+                <img src={img} alt="check" className="checkResultado"/>
+                <div id="contained-modal-title " className="center">
                  Detalle Comision
-                </h1>
+                </div>
+                
               </Modal.Header>
+
               <Modal.Body>
-              <Table responsive>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Razón Social</th>
-                    <th>N° Contrato</th>
-                    <th>N° de Trabajadores</th>
-                    <th>Macrosegmento</th>
-                    <th>RUT Vendedor</th>
-                    <th>RUT Supervisor</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>OCRE SPA</td>
-                    <td>272606</td>
-                    <td>1</td>
-                    <td>PYME</td>
-                    <td>15480963-5</td>
-                    <td>12153853-9</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>SERVICIOS INTEGRALES CACCIUTTOLO LTDA</td>
-                    <td>277488</td>
-                    <td>182</td>
-                    <td>Coorporativo</td>
-                    <td>14449517-9</td>
-                    <td>8871593-4</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>SOCIEDAD TECHOS VIENTO PUELCHE LIMITADA</td>
-                    <td>279829</td>
-                    <td>52</td>
-                    <td>PYME</td>
-                    <td>15624875-5</td>
-                    <td>9854623-3</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>SERVICIOS Y PROYECTOS AMBIENTALES S.A.</td>
-                    <td>265884</td>
-                    <td>30</td>
-                    <td>PYME</td>
-                    <td>13654846-5</td>
-                    <td>10254689-1</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>YASNA PAOLA MALDONADO VASQUEZ</td>
-                    <td>225465</td>
-                    <td>1</td>
-                    <td>Trabajador Independiente</td>
-                    <td>14258695-9</td>
-                    <td>12548958-3</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>HERESMANN Y SOLARI LIMITADA</td>
-                    <td>254987</td>
-                    <td>14</td>
-                    <td>PYME</td>
-                    <td>13654987-5</td>
-                    <td>10654347-5</td>
-                  </tr>
-                </tbody>
-              </Table>
+                <BootstrapTable data={ [] } pagination>
+                    <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
+                    <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
+                    <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+                </BootstrapTable>
               </Modal.Body>
+
                 <Modal.Footer>
                   <ButtonGroup>
                     <Button bsStyle="primary">Ejecutar</Button>

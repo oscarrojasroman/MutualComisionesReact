@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import {Table} from 'react-bootstrap';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import CalculoComision from './CalculoComision';
- 
+import img from './../../img/checkResultado.jpeg';
 
 import './Modal.css';
 import { IoIosPlay } from 'react-icons/io';
@@ -30,7 +30,7 @@ export default class ResultadoComision extends Component {
       render() {
         return (
           <div>
-            <Button bsStyle="primary" bsSize="large" className="btnCalculos"onClick={() => this.setState({ show: true })}>
+            <Button  bsSize="large" className="btnCalculos"onClick={() => this.setState({ show: true })}>
               <IoIosPlay className="iconPlay"/>
               <br/> 
               Ejecutar  
@@ -43,9 +43,10 @@ export default class ResultadoComision extends Component {
               aria-labelledby="contained-modal-title"
             >
               <Modal.Header closeButton>
-                <h1 id="contained-modal-title" className="center">
+                <img src={img} alt="check" className="checkResultado"/>
+                <div id="contained-modal-title" className="center">
                  Calculo Comision
-                </h1>
+                </div>
               </Modal.Header>
               <Modal.Body>
               <Table responsive>
