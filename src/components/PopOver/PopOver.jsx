@@ -14,7 +14,7 @@ class PopOver extends Component {
     render() {
         return (
             <div>
-                <OverlayTrigger trigger="click" placement="bottom" overlay={popoverBottom}>
+                <OverlayTrigger trigger="click" placement="bottom" overlay={popoverBottom} >
                   <IoIosHelpCircleOutline className="pop"/>
                 </OverlayTrigger>   
             </div>

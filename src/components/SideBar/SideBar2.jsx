@@ -17,8 +17,7 @@ class SideBar2 extends Component {
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Calcular"><IoIosCalculator/>Calcular  <IoIosArrowForward/></a></li>
                     <li className='li MenuAside-options-list-item'><a className="a" href="/Reporte"><IoIosClipboard/>Reporte   <IoIosArrowForward/></a></li>
                     <PopOver/>
-                    </div>
-                    
+                    </div>                   
                
                 
             </div>
