@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Popover, Button ,OverlayTrigger} from 'react-bootstrap';
+import { Popover,OverlayTrigger} from 'react-bootstrap';
 import { IoIosHelpCircleOutline } from 'react-icons/io';
 import './PopOver.css';
 
