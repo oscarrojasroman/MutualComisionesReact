@@ -15,18 +15,31 @@ export default class ModalAgregar extends Component {
     
         this.handleHide = this.handleHide.bind(this);
         this.state = {
-          show: false
+          show: false,
+          value: "asd"
         };
+        this.value="";
       }
     
       handleHide() {
         this.setState({ show: false });
       }
 
-      yourChangeHandler(event){
-        alert(event.target.value);
-             
+      handleChange(event){
+        if(event.target.value =="asd"){
+          this.value == 'FullRegion'
+        }
+        else if (event.target.value=="bar"){
+          this.value == 'ASD'
+        }
+        else if (event.target.value=="GestorComercial"){
+          this.value == 'Gestor'
+        }
+
+
       }
+
+      
       
 
 
@@ -57,23 +70,14 @@ export default class ModalAgregar extends Component {
               <Modal.Body>
               <FormGroup controlId="formControlsSelect">
                 <ControlLabel>Seleccione Parametro</ControlLabel>
-                <FormControl componentClass="select" placeholder="select" onChange={this.yourChangeHandler.bind(this)}>
+                <FormControl componentClass="select" placeholder="select">
                     <option value="foo">Full Region</option>
                     <option value="bar">Pyme</option>
                     <option value="asd">Gestor Comercial</option>
                 </FormControl>
             </FormGroup>
 
-                   {(() => {
-                         switch('select'){
-                            case 'foo':
-                              return 'bar';
-                            case 'bar':
-                              return 'asgfadag';
-                            default:
-                              return 'foo';
-                          }
-                    })()}
+                  {this.value}
                 
               </Modal.Body>
 

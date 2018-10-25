@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/CargaDeDatos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
-import ModalInicio from '../components/Modal/ModalInicio';
+
 
 
 
@@ -46,8 +46,7 @@ class App extends Component {
         <Router history={history}>
           <div>                            
                 <Navbar />                      
-                <SideBar2 />  
-                <ModalInicio/>    
+                <SideBar2 />                
                                        
                 <PrivateRoute exact path="/" component={Home} />                     
                 <PrivateRoute path="/parametros" component={Calcular} />
