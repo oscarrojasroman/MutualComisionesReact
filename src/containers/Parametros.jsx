@@ -10,12 +10,12 @@ import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';
 import TablaTope from '../components/Tablas/TablaTope';
-import { IoIosShuffle, IoIosCash, IoIosHand,IoIosSave, IoIosAdd } from 'react-icons/io';
+import { IoIosShuffle, IoIosCash, IoIosHand} from 'react-icons/io';
 import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 import TablaMeses from '../components/Tablas/TablaMeses';
-import { Button } from 'react-bootstrap';
 import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
 import TablaVeda from '../components/Tablas/TablaVeda';
+import ModalAgregar from '../components/Modal/ModalAgregar';
 
 const styles = theme => ({
   root: {
@@ -104,8 +104,7 @@ function FullWidthGrid(props) {
           </body>
           <footer>
             <div className="btGroup">
-              <Button className="btn-add-file1"><IoIosSave/>  Guardar Cambios</Button>      
-              <Button className="btn-add-file1"><IoIosAdd/>  Agregar </Button>
+              <ModalAgregar/>
             </div>
           </footer>
           

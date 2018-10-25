@@ -25,7 +25,6 @@
 
 .modal-content{
   width: 1002px;
-
 }
 
 .modal-dialog{
@@ -54,6 +53,11 @@
  margin-left: 37%;
 }
 
+.dolar{
+  margin-left: 40%;
+  width: 100px;
+ }
+
 .headers{
   background-color: #959ca1;
   
@@ -71,6 +75,13 @@
 }
 
 .modalFooter{
-  border-top: 0;
-  
+  border-top: 0; 
+}
+
+.modalinicio .modal-content{
+  width:500px;  
+}
+
+.modalinicio .modal-dialog{
+  margin-left: 35%;
 }

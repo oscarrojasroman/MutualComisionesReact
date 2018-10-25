@@ -30,15 +30,10 @@ export default class CalculoComision extends Component {
         return (
           <div>
             <Button bsStyle="primary">Ejecutar</Button>
-            <Button onClick={() => this.setState({ show: true })}> Detalle 
-            </Button>
-            
-            <Button onClick={this.handleHide}>Close</Button>
-    
+            <Button onClick={() => this.setState({ show: true })}> Detalle </Button>
             <Modal
               show={this.state.show}
               onHide={this.handleHide}
-              
               aria-labelledby="contained-modal-title"
               dialogClassName="custom-modal"
              
@@ -64,9 +59,8 @@ export default class CalculoComision extends Component {
 
                 <Modal.Footer className="modalFooter">
                   <ButtonGroup >
-                    <Button bsStyle="primary">Ejecutar</Button>
                     <Button >Excel</Button>
-                    <Button onClick={this.handleHide}>Close</Button>
+                    <Button onClick={this.handleHide}>Cerrar</Button>
                   </ButtonGroup>
                
               </Modal.Footer>

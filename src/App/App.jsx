@@ -12,6 +12,10 @@ import { connect } from 'react-redux';
 import SideBar2 from '../components/SideBar/SideBar2';
 import CargaDeDatos from '../components/CargaDeDatos/CargaDeDatos';
 import { APP_LOAD , REDIRECT } from '../constants/actionTypes';
+import ModalInicio from '../components/Modal/ModalInicio';
+
+
+
 
 const mapStateToProps = ( state )=> {
   const { alert } = state;
@@ -42,7 +46,9 @@ class App extends Component {
         <Router history={history}>
           <div>                            
                 <Navbar />                      
-                <SideBar2 />                                  
+                <SideBar2 />  
+                <ModalInicio/>    
+                                       
                 <PrivateRoute exact path="/" component={Home} />                     
                 <PrivateRoute path="/parametros" component={Calcular} />
                 <PrivateRoute path="/calcular" component={Calculo} />

@@ -69,9 +69,10 @@ export default class ResultadoComision extends Component {
               </Table>
               </Modal.Body>
                 <Modal.Footer className="modalFooter">  
-                    <div className="botonesEnLinea">
-                    <ButtonGroup>                        
+                    <div >
+                    <ButtonGroup className="botonesEnLinea">                        
                         <CalculoComision />
+                        <Button onClick={this.handleHide}>Cerrar</Button>
                     </ButtonGroup>
                     </div>              
                 
