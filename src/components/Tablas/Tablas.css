@@ -39,7 +39,7 @@
 }
 
 .tabla{
-    width: 36%;   
+    width: 350px;   
     background: white;
     margin-left: 30%;
     margin-bottom: 10%;
@@ -53,12 +53,12 @@
 }
 
 .t4{
-    width: 287px;
+    width: 350px;
 }
 
 .tablafull{
     margin-bottom: 1%;
-    width: 39.5%;
+    width: 350px;
     background: white;
     border: solid;
 }
@@ -70,7 +70,7 @@
 
 .tablapyme{
     margin-bottom: 5%;
-    width: 317px;
+    width: 350px;
     background: white;
     border: solid;
 }
@@ -146,7 +146,7 @@
 }
 
 .tablaGestor{
-    width: 39.5%;
+    width: 350px;
     background: white;
     border: solid;
 }

@@ -17,6 +17,7 @@ import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
 import TablaVeda from '../components/Tablas/TablaVeda';
 import ModalAgregar from '../components/Modal/ModalAgregar';
 
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -36,7 +37,7 @@ function FullWidthGrid(props) {
   <div className={classes.root}>   
       <Grid className="wrapper3">
         <Grid className="calculateTable1" >
-          <body>
+          
           <Tabs>
             <TabList className="card-header1"> 
             <ul className="nav-justified nav1">         
@@ -101,7 +102,7 @@ function FullWidthGrid(props) {
              
           </Tabs> 
 
-          </body>
+          
           <footer>
             <div className="btGroup">
               <ModalAgregar/>

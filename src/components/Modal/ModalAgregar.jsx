@@ -5,9 +5,6 @@ import img from './../../img/checkResultado.jpeg';
 import './Modal.css';
 import { IoIosAdd } from 'react-icons/io';
 
-
-
-
 export default class ModalAgregar extends Component {
 
     constructor(props, context) {
@@ -25,26 +22,12 @@ export default class ModalAgregar extends Component {
         this.setState({ show: false });
       }
 
-      handleChange(event){
-        if(event.target.value =="asd"){
-          this.value == 'FullRegion'
-        }
-        else if (event.target.value=="bar"){
-          this.value == 'ASD'
-        }
-        else if (event.target.value=="GestorComercial"){
-          this.value == 'Gestor'
-        }
-
-
+      handleSelectChange = (event) => {
+        this.setState({
+          result: event.target.value
+        })
       }
 
-      
-      
-
-
-
-       
       render() {
         
         return (
@@ -70,14 +53,16 @@ export default class ModalAgregar extends Component {
               <Modal.Body>
               <FormGroup controlId="formControlsSelect">
                 <ControlLabel>Seleccione Parametro</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
-                    <option value="foo">Full Region</option>
-                    <option value="bar">Pyme</option>
-                    <option value="asd">Gestor Comercial</option>
+                <FormControl componentClass="select" placeholder="select" onClick={this.handleSelectChange}>
+                    <option value="Full Region">Full Region</option>
+                    <option value="Pyme">Pyme</option>
+                    <option value="Gestor Comercial">Gestor Comercial</option>
                 </FormControl>
             </FormGroup>
-
-                  {this.value}
+                 <div>
+                   
+                   {this.state.result}
+                 </div>
                 
               </Modal.Body>
 
