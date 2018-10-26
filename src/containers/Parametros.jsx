@@ -15,7 +15,7 @@ import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 import TablaMeses from '../components/Tablas/TablaMeses';
 import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
 import TablaVeda from '../components/Tablas/TablaVeda';
-import ModalAgregar from '../components/Modal/ModalAgregar';
+import ModalAgregar  from '../components/Modal/ModalAgregar';
 
 
 const styles = theme => ({
