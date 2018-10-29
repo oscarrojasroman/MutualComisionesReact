@@ -9,14 +9,11 @@ export const parametersActions = {
 
 function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
     return dispatch => {
-        dispatch(request(sellerType, workerMaximunAmount,commissionFactor,commissionGift));
-
-        parametersService.services(sellerType, workerMaximunAmount,commissionFactor,commissionGift)
+        parametersService.add(sellerType, workerMaximunAmount,commissionFactor,commissionGift)
             .then(
-                () => { 
-                    dispatch(success());
+                parameter => { 
+                    dispatch(success(parameter));
                     history.push('/Parametros');
-                    dispatch(alertActions.success('Add Succesfull'));
                 },
                 error => {
                     dispatch(failure(error));
@@ -24,8 +21,7 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
                 }
             );
     };
-    function request(parametersActions) { return { type: parametersConstants.ADD_REQUEST, parametersActions } }
-    function success(parametersActions) { return { type: parametersConstants.ADD_SUCCESS, parametersActions } }
+    function success() { return { type: parametersConstants.ADD_SUCCESS} }
     function failure(error) { return { type: parametersConstants.ADD_ERROR, error } }
 }
 

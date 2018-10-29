@@ -11,7 +11,14 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
         body: JSON.stringify({ sellerType, workerMaximunAmount,commissionFactor,commissionGift })
     };
 
-    return fetch(config.apiUrl + '/SellerRangeParameter', requestOptions).then(handleResponse, handleError);
+    return fetch(config.apiUrl + '/SellerRangeParameter/', requestOptions)
+    .then(handleResponse, handleError) 
+    .then(parameter => {
+        if (parameter && parameter.add) {
+            localStorage.setItem('parameter', JSON.stringify(parameter));              
+        }
+        return parameter;
+    });
 }
 
 /* function update(user) {

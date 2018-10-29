@@ -15,7 +15,7 @@ import TablaMinTrab from '../components/Tablas/TablaMinTrab';
 import TablaMeses from '../components/Tablas/TablaMeses';
 import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
 import TablaVeda from '../components/Tablas/TablaVeda';
-import ModalAgregar  from '../components/Modal/ModalAgregar';
+import { ModalAgregar }  from '../components/Modal/ModalAgregar';
 
 
 const styles = theme => ({
@@ -23,8 +23,8 @@ const styles = theme => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
+    padding: theme.spacing.unit * 1,
+    
     
   },
 });
@@ -106,6 +106,7 @@ function FullWidthGrid(props) {
           <footer>
             <div className="btGroup">
               <ModalAgregar/>
+              
             </div>
           </footer>
           
@@ -123,3 +124,4 @@ FullWidthGrid.propTypes = {
 };
 
 export default withStyles(styles)(FullWidthGrid);
+

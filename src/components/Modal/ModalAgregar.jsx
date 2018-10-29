@@ -5,9 +5,10 @@ import img from './../../img/mas.png';
 import './Modal.css';
 import { IoIosAdd } from 'react-icons/io';
 import { parametersActions } from '../../actions';
+import { connect } from 'react-redux';
 
 
-export default class ModalAgregar extends Component {
+class ModalAgregar extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -20,11 +21,10 @@ export default class ModalAgregar extends Component {
         this.state = {
           date: date,
           show: false,
-          value : "",
           sellerType: "",
-          workerMaximunAmount: "",
-          commissionFactor:"",
-          commissionGift : "",  
+          workerMaximunAmount: 0,
+          commissionFactor: 0,
+          commissionGift : 0,  
           submitted: false
         };
 
@@ -36,61 +36,44 @@ export default class ModalAgregar extends Component {
 
       
     
-      handleHide() {
+      handleHide() 
+      {
         this.setState({ show: false });
       }
 
-      handleSelectChange = (event) => {
+      handleSelectChange = (event) =>
+      {
         this.setState({
-          result: event.target.value
+          result: event.target.value,
+          sellerType: event.target.value
         })
       }
 
-      handleChange(e) {
+      handleChange(e) 
+      {
         const { name, value } = e.target;
         this.setState({ [name]: value });
-    }
+      }
     
-      handleSubmit(e) {
+      handleSubmit(e)
+     {
           e.preventDefault();
       
           this.setState({ submitted: true });
           const { sellerType, workerMaximunAmount,commissionFactor,commissionGift } = this.state;
           const { dispatch } = this.props;
-          if (sellerType != null && workerMaximunAmount!= null && commissionFactor != null &&commissionGift!= null) 
+          if (sellerType && workerMaximunAmount && commissionFactor && commissionGift) 
           {
               dispatch(parametersActions.add(sellerType, workerMaximunAmount,commissionFactor,commissionGift));
           }   
       }
 
-      componentDidMount()
-      {
-          this.setState({ sellerType : "Full"});
-      }
-
-
-     
-
-
+ 
       render() {
 
         let addParametersBody = null;
-        const { workerMaximunAmount,commissionFactor,commissionGift,submitted }= this.state;
-        const { addeIn } = this.props;
-
-        if(this.state.result === "Full Region")
-        {
-          this.componentDidMount;
-        }
-        else if(this.state.result === "Pyme")
-        {
-          this.setState.sellerType === "Pyme"
-        }
-        else if(this.state.result === "Gestor Comercial")
-        {
-          this.setState.sellerType === "Gestor Comercial"
-        }
-
+        const { add } = this.props;
+        const { workerMaximunAmount,commissionFactor,commissionGift,submitted }= this.state;        
 
         if(this.state.result === "Full Region" || this.state.result ==="Pyme" || this.state.result ==="Gestor Comercial")
         {
@@ -100,7 +83,7 @@ export default class ModalAgregar extends Component {
                   <FormControl 
                   type="number" 
                   name ="workerMaximunAmount" 
-                  placeholder="Numero de Trabajadores" 
+                  placeholder="Cantidad de Trabajadores" 
                   className="formAgregar"
                   onChange={this.handleChange}/>
                   
@@ -164,10 +147,10 @@ export default class ModalAgregar extends Component {
 
               <Modal.Body>
 
-              <FormGroup controlId="formControlsSelect">
+              <FormGroup controlId="formControlsSelect" >
                 <ControlLabel>Seleccione Parametro</ControlLabel>
                 <FormControl componentClass="select" placeholder="select" onClick={this.handleSelectChange}>
-                    <option value="Full Region">Full Region</option>
+                    <option value="Full Region" >Full Region</option>
                     <option value="Pyme">Pyme</option>
                     <option value="Gestor Comercial">Gestor Comercial</option>
                     <option value="UF">UF</option>
@@ -181,9 +164,9 @@ export default class ModalAgregar extends Component {
               </Modal.Body>
 
                 <Modal.Footer className="modalFooter">
-                  <ButtonGroup >
+                  <ButtonGroup >                   
                     <Button onClick={this.handleSubmit}>Guardar</Button>
-                    {addeIn}
+                      {add}                                     
                     <Button onClick={this.handleHide}>Cerrar</Button>
                   </ButtonGroup>
                
@@ -192,16 +175,16 @@ export default class ModalAgregar extends Component {
           </div>
         );
       }
+  }
     
-}
 
-/* function mapStateToProps(state) {
-  const { addeIn } = state.addeIn;
+function mapStateToProps(state) {
+  const { add } = state.add;
   return {
-      addeIn
+      add
   };
 }
 
 const connectedModalAgregar = connect(mapStateToProps)(ModalAgregar);
 export { connectedModalAgregar as ModalAgregar };
- */
+ 
