@@ -8,11 +8,13 @@ export function add(state = initialState, action) {
   switch (action.type) {
     case parametersConstants.REQUEST:
       return {
-        add: true,        
+        add: true,    
+        parameter: action.parameter    
       };
     case parametersConstants.SUCCESS:
       return {
-        add: true,       
+        add: true, 
+        parameter: action.parameter         
       };
     case parametersConstants.ERROR:
       return {};

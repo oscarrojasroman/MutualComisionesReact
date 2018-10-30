@@ -21,8 +21,8 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
                 }
             );
     };
-    function success() { return { type: parametersConstants.ADD_SUCCESS} }
-    function failure(error) { return { type: parametersConstants.ADD_ERROR, error } }
+    function success(parameter) { return { type: parametersConstants.SUCCESS , parameter}}
+    function failure(error) { return { type: parametersConstants.ERROR, error } }
 }
 
 

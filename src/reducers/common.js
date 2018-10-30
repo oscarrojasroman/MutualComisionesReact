@@ -26,6 +26,7 @@ export default (state = defaultState, action) => {
     case LOGOUT:
       return { ...state, redirectTo: '/', token: null, currentUser: null };
     case LOGIN:
+      return state;
     case REGISTER:
       return {
         ...state,
