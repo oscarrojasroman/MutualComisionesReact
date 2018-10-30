@@ -37,7 +37,7 @@ export default class TablaFullRegion2 extends Component {
       
 
   render() {
-    let fullList = this.state.data.filter(dat => dat.sellerType === 'Full').map(dat => dat);
+    let fullList = this.state.data.filter(dat => dat.sellerType === 'Full Region').map(dat => dat);
     return (
         <div className="tablafull">
             <p className="captionf">Full Region</p>

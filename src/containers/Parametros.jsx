@@ -103,11 +103,8 @@ function FullWidthGrid(props) {
           </Tabs> 
 
           
-          <footer>
-            <div className="btGroup">
-              <ModalAgregar/>
-              
-            </div>
+          <footer>            
+              <ModalAgregar/>             
           </footer>
           
           

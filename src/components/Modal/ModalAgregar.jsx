@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { Button, ButtonGroup,ControlLabel,FormGroup,FormControl} from 'react-bootstrap';
 import img from './../../img/mas.png';
 import './Modal.css';
-import { IoIosAdd } from 'react-icons/io';
+import { IoIosAdd, IoIosSave } from 'react-icons/io';
 import { parametersActions } from '../../actions';
 import { connect } from 'react-redux';
 
@@ -127,7 +127,10 @@ class ModalAgregar extends Component {
         
         return (
           <div>
-            <Button onClick={() => this.setState({ show: true })}  className="btn-add-file1"><IoIosAdd/>Agregar </Button>
+            <ButtonGroup className="botonesEnLinea botonesAgregar">
+              <Button onClick={() => this.setState({ show: true })}  className="btn-add-file1"><IoIosAdd/>Agregar </Button>
+              <Button  className="btn-add-file1"><IoIosSave/>Guardar</Button>
+            </ButtonGroup>
 
             <Modal
               show={this.state.show}

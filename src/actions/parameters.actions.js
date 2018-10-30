@@ -13,7 +13,7 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
             .then(
                 parameter => { 
                     dispatch(success(parameter));
-                    history.push('/Parametros');
+                    history.go('/Parametros');
                 },
                 error => {
                     dispatch(failure(error));
