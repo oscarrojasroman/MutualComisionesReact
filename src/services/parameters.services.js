@@ -1,7 +1,8 @@
 import { config } from '../helpers';
 
 export const parametersService = {
-    add
+    add,
+    addUf
 };
 
 function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
@@ -12,6 +13,23 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
     };
 
     return fetch(config.apiUrl + '/SellerRangeParameter/', requestOptions)
+    .then(handleResponse, handleError) 
+    .then(parameter => {
+        if (parameter && parameter.add) {
+            localStorage.setItem('parameter', JSON.stringify(parameter));              
+        }
+        return parameter;
+    });
+}
+
+function addUf(value,date) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ value,date})
+    };
+
+    return fetch(config.apiUrl + '/Ufparameter/', requestOptions)
     .then(handleResponse, handleError) 
     .then(parameter => {
         if (parameter && parameter.add) {

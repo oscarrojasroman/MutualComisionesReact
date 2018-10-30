@@ -16,6 +16,7 @@ import TablaMeses from '../components/Tablas/TablaMeses';
 import TablaGrandesCuentas from '../components/Tablas/TablaGrandesCuentas';
 import TablaVeda from '../components/Tablas/TablaVeda';
 import { ModalAgregar }  from '../components/Modal/ModalAgregar';
+import { ModalAgregarUf } from '../components/Modal/ModalAgregarUf';
 
 
 const styles = theme => ({
@@ -61,7 +62,7 @@ function FullWidthGrid(props) {
                   <TablaGestorComercial2/>
                   
                 </div>           
-                   
+                <ModalAgregar/>  
               </TabPanel>
 
             {/* TAB METAS */}
@@ -76,6 +77,7 @@ function FullWidthGrid(props) {
                 <div className="tUf">
                 <TablaUf/>
                 </div>
+                <ModalAgregarUf/>
               </TabPanel>
 
               {/* TAB GENERAL*/}
@@ -104,7 +106,7 @@ function FullWidthGrid(props) {
 
           
           <footer>            
-              <ModalAgregar/>             
+                         
           </footer>
           
           

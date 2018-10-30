@@ -6,10 +6,10 @@ import './Modal.css';
 import { IoIosAdd, IoIosSave } from 'react-icons/io';
 import { parametersActions } from '../../actions';
 import { connect } from 'react-redux';
-import ModalInicio from './ModalInicio';
 
 
-class ModalAgregar extends Component {
+
+class ModalAgregarUf extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -22,10 +22,7 @@ class ModalAgregar extends Component {
         this.state = {
           date: date,
           show: false,
-          sellerType: "",
-          workerMaximunAmount: 0,
-          commissionFactor: 0,
-          commissionGift : 0,  
+          value: 0,        
           submitted: false
         };
 
@@ -61,12 +58,11 @@ class ModalAgregar extends Component {
           e.preventDefault();
       
           this.setState({ submitted: true });
-          const { sellerType, workerMaximunAmount,commissionFactor,commissionGift } = this.state;
+          const { value, date } = this.state;
           const { dispatch } = this.props;
-          if (sellerType && workerMaximunAmount && commissionFactor && commissionGift) 
+          if (value && date) 
           {
-              dispatch(parametersActions.add(sellerType, workerMaximunAmount,commissionFactor,commissionGift));
-              
+              dispatch(parametersActions.addUf(value, date));              
           }   
 
       }
@@ -76,56 +72,23 @@ class ModalAgregar extends Component {
 
         let addParametersBody = null;
         const { add } = this.props;
-        const { workerMaximunAmount,commissionFactor,commissionGift,submitted }= this.state;        
+        const {value,submitted }= this.state;        
 
-        if(this.state.result === "Full Region" || this.state.result ==="Pyme" || this.state.result ==="Gestor Comercial")
-        {
-
-          addParametersBody= 
-           <FormGroup onSubmit={this.handleSubmit}>
-                  <FormControl 
-                  type="number" 
-                  name ="workerMaximunAmount" 
-                  placeholder="Cantidad de Trabajadores" 
-                  className="formAgregar"
-                  onChange={this.handleChange}/>
-                  
-                   {    
-                     submitted && !workerMaximunAmount &&
-                      <div className="help-block">La cantidad de Trabajadores es requerida</div>
+       
+          addParametersBody =
+            <FormGroup >
+                  <FormControl type="date" placeholder="Fecha" className="formAgregar" defaultValue={this.state.date} name="date"  onChange={this.handleChange}/>
+                    {    
+                        submitted && ! value &&
+                        <div className="help-block">La Fecha es requerida</div>
                     }
-
-                  <FormControl 
-                  type="number" 
-                  name="commissionFactor" 
-                  placeholder="Porcentaje Comision"
-                  className="formAgregar"
-                  onChange={this.handleChange}/>
-                   {    
-                     submitted && !commissionFactor &&
-                      <div className="help-block">El porcentaje de comision es requerido</div>
+                  <FormControl type="number" placeholder="Valor" className="formAgregar" name="value"  onChange={this.handleChange}/>
+                    {    
+                        submitted && ! value &&
+                        <div className="help-block">El Valor es requerido</div>
                     }
-
-                  <FormControl 
-                  type="number" 
-                  name="commissionGift" 
-                  placeholder="Porcentaje Premio" 
-                  className="formAgregar"
-                  onChange={this.handleChange}/>
-                   {    
-                     submitted && !commissionGift &&
-                      <div className="help-block">El porcentaje de premio es requerido</div>
-                    }
-          </FormGroup>;
-
-        }       
-        else if (this.state.result ==="UF")
-        {
-          addParametersBody = <FormGroup >
-                  <FormControl type="date" placeholder="Fecha" className="formAgregar" defaultValue={this.state.date}/>
-                  <FormControl type="number" placeholder="Valor" className="formAgregar"/>
-                </FormGroup>;
-        }
+            </FormGroup>;
+        
 
         
         return (
@@ -156,13 +119,9 @@ class ModalAgregar extends Component {
               <FormGroup controlId="formControlsSelect" >
                 <ControlLabel>Seleccione Parametro</ControlLabel>
                 <FormControl componentClass="select" placeholder="select" onClick={this.handleSelectChange}>
-                    <option value="Full Region" >Full Region</option>
-                    <option value="Pyme">Pyme</option>
-                    <option value="Gestor Comercial">Gestor Comercial</option>
                     <option value="UF">UF</option>
                 </FormControl>
-              </FormGroup>
-                 
+              </FormGroup>                 
                  <div>                   
                    {addParametersBody}
                  </div>
@@ -193,6 +152,6 @@ function mapStateToProps(state) {
   };
 }
 
-const connectedModalAgregar = connect(mapStateToProps)(ModalAgregar);
-export { connectedModalAgregar as ModalAgregar };
+const connectedModalAgregar = connect(mapStateToProps)(ModalAgregarUf);
+export { connectedModalAgregar as ModalAgregarUf };
  

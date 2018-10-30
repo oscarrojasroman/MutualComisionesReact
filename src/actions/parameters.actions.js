@@ -4,7 +4,8 @@ import { alertActions } from '.';
 import { history } from '../helpers';
 
 export const parametersActions = {
-   add
+   add,
+   addUf
 };
 
 function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
@@ -14,6 +15,26 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
                 parameter => { 
                     dispatch(success(parameter));
                     history.go('/Parametros');
+                    dispatch(alertActions.success('Add successful'));
+                },
+                error => {
+                    dispatch(failure(error));
+                    dispatch(alertActions.error(error));
+                }
+            );
+    };
+    function success(parameter) { return { type: parametersConstants.SUCCESS , parameter}}
+    function failure(error) { return { type: parametersConstants.ERROR, error } }
+}
+
+function addUf(value,date) {
+    return dispatch => {
+        parametersService.addUf(value,date)
+            .then(
+                parameter => { 
+                    dispatch(success(parameter));
+                    history.go('/Parametros');
+                    dispatch(alertActions.success('Add successful'));
                 },
                 error => {
                     dispatch(failure(error));
