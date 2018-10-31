@@ -6,21 +6,14 @@ import './Modal.css';
 import { IoIosAdd, IoIosSave } from 'react-icons/io';
 import { parametersActions } from '../../actions';
 import { connect } from 'react-redux';
-import ModalInicio from './ModalInicio';
-
 
 class ModalAgregar extends Component {
 
     constructor(props, context) {
         super(props, context);
         
-        var today = new Date(),
-        date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
- 
         this.handleHide = this.handleHide.bind(this);
         this.state = {
-          date: date,
           show: false,
           sellerType: "",
           workerMaximunAmount: 0,
@@ -78,10 +71,7 @@ class ModalAgregar extends Component {
         const { add } = this.props;
         const { workerMaximunAmount,commissionFactor,commissionGift,submitted }= this.state;        
 
-        if(this.state.result === "Full Region" || this.state.result ==="Pyme" || this.state.result ==="Gestor Comercial")
-        {
-
-          addParametersBody= 
+        addParametersBody= 
            <FormGroup onSubmit={this.handleSubmit}>
                   <FormControl 
                   type="number" 
@@ -118,16 +108,6 @@ class ModalAgregar extends Component {
                     }
           </FormGroup>;
 
-        }       
-        else if (this.state.result ==="UF")
-        {
-          addParametersBody = <FormGroup >
-                  <FormControl type="date" placeholder="Fecha" className="formAgregar" defaultValue={this.state.date}/>
-                  <FormControl type="number" placeholder="Valor" className="formAgregar"/>
-                </FormGroup>;
-        }
-
-        
         return (
           <div>
             <ButtonGroup className="botonesEnLinea botonesAgregar">
@@ -159,7 +139,6 @@ class ModalAgregar extends Component {
                     <option value="Full Region" >Full Region</option>
                     <option value="Pyme">Pyme</option>
                     <option value="Gestor Comercial">Gestor Comercial</option>
-                    <option value="UF">UF</option>
                 </FormControl>
               </FormGroup>
                  

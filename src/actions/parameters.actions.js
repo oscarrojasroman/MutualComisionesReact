@@ -27,6 +27,25 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
     function failure(error) { return { type: parametersConstants.ERROR, error } }
 }
 
+function updateParameters(id,sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
+    return dispatch => {
+        parametersService.add(id,sellerType, workerMaximunAmount,commissionFactor,commissionGift)
+            .then(
+                parameter => { 
+                    dispatch(success(parameter));
+                    history.go('/Parametros');
+                    dispatch(alertActions.success('Update successful'));
+                },
+                error => {
+                    dispatch(failure(error));
+                    dispatch(alertActions.error(error));
+                }
+            );
+    };
+    function success(parameter) { return { type: parametersConstants.UPDATE_SUCCESS , parameter}}
+    function failure(error) { return { type: parametersConstants.ERROR, error } }
+}
+
 function addUf(value,date) {
     return dispatch => {
         parametersService.addUf(value,date)
@@ -35,6 +54,7 @@ function addUf(value,date) {
                     dispatch(success(parameter));
                     history.go('/Parametros');
                     dispatch(alertActions.success('Add successful'));
+                    alert('Uf Agregada Correctamente');
                 },
                 error => {
                     dispatch(failure(error));

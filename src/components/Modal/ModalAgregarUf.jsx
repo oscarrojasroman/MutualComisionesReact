@@ -62,8 +62,9 @@ class ModalAgregarUf extends Component {
           const { dispatch } = this.props;
           if (value && date) 
           {
-              dispatch(parametersActions.addUf(value, date));              
-          }   
+              dispatch(parametersActions.addUf(value, date));                 
+          }    
+                
 
       }
 

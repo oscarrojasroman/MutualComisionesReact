@@ -2,7 +2,8 @@ import { config } from '../helpers';
 
 export const parametersService = {
     add,
-    addUf
+    addUf,
+    updateParameter
 };
 
 function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
@@ -39,16 +40,17 @@ function addUf(value,date) {
     });
 }
 
-/* function update(user) {
+ function updateParameter(parameter) {
     const requestOptions = {
         method: 'PUT',
-        headers: { ...authHeader(), 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(parameter)
     };
 
-    return fetch(config.apiUrl + '/users/' + user.id, requestOptions).then(handleResponse, handleError);
+    return fetch(config.apiUrl + '/SellerRangeParameter/' + parameter.id, requestOptions).then(handleResponse, handleError);
 }
 
+/*  
 function _delete(id) {
     const requestOptions = {
         method: 'DELETE',

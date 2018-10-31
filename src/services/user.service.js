@@ -21,10 +21,8 @@ function login(email, password) {
         .then(handleResponse, handleError)
         .then(user => {
             if (user && user.token) {
-                localStorage.setItem('user', JSON.stringify(user));              
+                localStorage.setItem('user', JSON.stringify(user));
             }
-
-
             return user;
         });
 }
