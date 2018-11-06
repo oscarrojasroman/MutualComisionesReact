@@ -30,14 +30,14 @@ export default class TablaGestorComercial extends Component {
         })
       }
   render() {
-    let dataList = this.state.data.filter(dat => dat.sellerType === 'Gestor Comercial').map(dat => dat);
+    let dataList = this.state.data.filter(dat => dat.sellerType.id === 2).map(dat => dat);
     return (
         <div className="tablaGestor"> 
             <p className="captiong">Gestor Comercial</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
-          <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } dataAlign="center" dataSort>Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='commissionFactor' dataAlign="center">Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='commissionGift' dataAlign="center">Premio</TableHeaderColumn>         
+          <TableHeaderColumn  dataField='commissionGift' dataAlign="center" dataSort>Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

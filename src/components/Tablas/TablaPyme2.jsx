@@ -30,15 +30,15 @@ export default class TablaPyme2 extends Component {
       }
 
   render() {
-    let dataList = this.state.data.filter(dat => dat.sellerType === 'Pyme').map(dat => dat);
+    let dataList = this.state.data.filter(dat => dat.sellerType.id === 3).map(dat => dat);
 
     return (
         <div className="tablapyme"> 
             <p className="captionp">Pyme</p>
       <BootstrapTable data={ dataList } cellEdit={ cellEditProp } hover = { true }  options={options}>          
-          <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } className="headertable" dataAlign="center">Trabajadores</TableHeaderColumn>     
+          <TableHeaderColumn  dataField='workerMaximunAmount' isKey={ true } className="headertable" dataAlign="center" dataSort>Trabajadores</TableHeaderColumn>     
           <TableHeaderColumn  dataField='commissionFactor' className="headertable" dataAlign="center">Comision</TableHeaderColumn>
-          <TableHeaderColumn  dataField='commissionGift' className="headertable" dataAlign="center">Premio</TableHeaderColumn>         
+          <TableHeaderColumn  dataField='commissionGift' className="headertable" dataAlign="center" dataSort>Premio</TableHeaderColumn>         
       </BootstrapTable>
       </div>
        

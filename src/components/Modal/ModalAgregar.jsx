@@ -15,7 +15,7 @@ class ModalAgregar extends Component {
         this.handleHide = this.handleHide.bind(this);
         this.state = {
           show: false,
-          sellerType: "",
+          id: 0,
           workerMaximunAmount: 0,
           commissionFactor: 0,
           commissionGift : 0,  
@@ -39,7 +39,7 @@ class ModalAgregar extends Component {
       {
         this.setState({
           result: event.target.value,
-          sellerType: event.target.value
+          id: event.target.value
         })
       }
 
@@ -54,11 +54,11 @@ class ModalAgregar extends Component {
           e.preventDefault();
       
           this.setState({ submitted: true });
-          const { sellerType, workerMaximunAmount,commissionFactor,commissionGift } = this.state;
+          const { id, workerMaximunAmount,commissionFactor,commissionGift } = this.state;
           const { dispatch } = this.props;
-          if (sellerType && workerMaximunAmount && commissionFactor && commissionGift) 
+          if (id && workerMaximunAmount && commissionFactor && commissionGift) 
           {
-              dispatch(parametersActions.add(sellerType, workerMaximunAmount,commissionFactor,commissionGift));
+              dispatch(parametersActions.add(id, workerMaximunAmount,commissionFactor,commissionGift));
               
           }   
 
@@ -136,9 +136,9 @@ class ModalAgregar extends Component {
               <FormGroup controlId="formControlsSelect" >
                 <ControlLabel>Seleccione Parametro</ControlLabel>
                 <FormControl componentClass="select" placeholder="select" onClick={this.handleSelectChange}>
-                    <option value="Full Region" >Full Region</option>
-                    <option value="Pyme">Pyme</option>
-                    <option value="Gestor Comercial">Gestor Comercial</option>
+                    <option value="1" >Full Region</option>
+                    <option value="2">Pyme</option>
+                    <option value="3">Gestor Comercial</option>
                 </FormControl>
               </FormGroup>
                  

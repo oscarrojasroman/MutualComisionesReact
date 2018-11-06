@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import img from './../../img/checkResultado.jpeg';
-
+import { config } from './../../helpers/config';
 import './Modal.css';
 
 
@@ -19,23 +19,37 @@ export default class CalculoComision extends Component {
     this.handleHide = this.handleHide.bind(this);
 
     this.state = {
-      show: false
+      show: false,
+      data:[]
     };
   }
 
   handleHide() {
     this.setState({ show: false });
   }
+
+  url = config.apiUrl+ '/Commission';
+
+  
+  componentDidMount(){
+    fetch(this.url).then((Response)=>Response.json())
+    .then((findresponse)=>{
+      console.log(findresponse)
+      this.setState({
+        data:findresponse
+      })
+    })
+  }
+
   render() {
+
+    let fullList = this.state.data./* filter(dat => dat.sellerType.id === 1). */map(dat => dat);
     return (
       <div>
-
-        {/* <Button onClick={() => this.setState({ show: true })}> Detalle </Button> */}
-
         <Modal
           show={this.props.show}
           onHide={this.props.handleHide}
-          aria-labelledby="contained-modal-title"
+          aria-labelledby="contained-modal-title modaleDetalle"
           dialogClassName="custom-modal"
 
         >
@@ -48,13 +62,13 @@ export default class CalculoComision extends Component {
           </Modal.Header>
 
           <Modal.Body>
-            <BootstrapTable data={this.props.data} pagination options={options}>
-              <TableHeaderColumn dataField='processNumber' isKey className="headers">Numero de Proceso</TableHeaderColumn>
-              <TableHeaderColumn dataField='processDate' className="headers">Fecha</TableHeaderColumn>
-              <TableHeaderColumn dataField={'fiscalId'.concat('verificatorDigit')} className="headers">RUT</TableHeaderColumn>
-              <TableHeaderColumn dataField='name' className="headers">Nombre</TableHeaderColumn>
-              <TableHeaderColumn dataField='paymentConcept' className="headers">Concepto de Pago</TableHeaderColumn>
-              <TableHeaderColumn dataField='paymentAmount' className="headers">Monto</TableHeaderColumn>
+            <BootstrapTable data={ fullList } pagination options={options}>
+              <TableHeaderColumn dataField='id' isKey className="headers">Numero de Proceso</TableHeaderColumn>
+              <TableHeaderColumn dataField='processDate' className="headers" dataAlign="center" dataSort>Fecha</TableHeaderColumn>
+              <TableHeaderColumn dataField='fiscalId' className="headers" dataAlign="center" dataSort>RUT</TableHeaderColumn>
+              <TableHeaderColumn dataField='name' className="headers" dataAlign="center" dataSort>Nombre</TableHeaderColumn>
+              <TableHeaderColumn dataField='paymenConcept' className="headers" dataAlign="center" dataSort>Concepto de Pago</TableHeaderColumn>
+              <TableHeaderColumn dataField='paymentAmount' className="headers" dataAlign="center" dataSort>Monto</TableHeaderColumn>
             </BootstrapTable>
           </Modal.Body>
 

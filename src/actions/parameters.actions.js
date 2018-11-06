@@ -5,7 +5,8 @@ import { history } from '../helpers';
 
 export const parametersActions = {
    add,
-   addUf
+   addUf,
+   update
 };
 
 function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
@@ -27,7 +28,7 @@ function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
     function failure(error) { return { type: parametersConstants.ERROR, error } }
 }
 
-function updateParameters(id,sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
+function update(id,sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
     return dispatch => {
         parametersService.add(id,sellerType, workerMaximunAmount,commissionFactor,commissionGift)
             .then(

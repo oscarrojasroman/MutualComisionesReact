@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import TablaPyme2 from '../components/Tablas/TablaPyme2';
-import TablaFullRegion2 from '../components/Tablas/TablaFullRegion2';
+import { TablaFullRegion2 } from '../components/Tablas/TablaFullRegion2';
 import TablaGestorComercial2 from '../components/Tablas/TablaGestorComercial2';
 import TablaUf from '../components/Tablas/TablaUf';
 import './Calcular.css';

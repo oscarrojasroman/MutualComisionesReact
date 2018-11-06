@@ -3,14 +3,14 @@ import { config } from '../helpers';
 export const parametersService = {
     add,
     addUf,
-    updateParameter
+    update
 };
 
-function add(sellerType, workerMaximunAmount,commissionFactor,commissionGift) {
+function add(id, workerMaximunAmount,commissionFactor,commissionGift) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sellerType, workerMaximunAmount,commissionFactor,commissionGift })
+        body: JSON.stringify([{sellerType:{id}, workerMaximunAmount,commissionFactor,commissionGift }])
     };
 
     return fetch(config.apiUrl + '/SellerRangeParameter/', requestOptions)
@@ -27,7 +27,7 @@ function addUf(value,date) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ value,date})
+        body: JSON.stringify([{ value,date}])
     };
 
     return fetch(config.apiUrl + '/Ufparameter/', requestOptions)
@@ -40,7 +40,7 @@ function addUf(value,date) {
     });
 }
 
- function updateParameter(parameter) {
+ function update(parameter) {
     const requestOptions = {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
